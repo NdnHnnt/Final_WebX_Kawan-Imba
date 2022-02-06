@@ -122,6 +122,15 @@ input[type="text"],input[type="email"],input[type="password"], textarea {
   border-radius: 15;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
 .form-control{
 -webkit-border-radius: 20;
    -moz-border-radius: 20;

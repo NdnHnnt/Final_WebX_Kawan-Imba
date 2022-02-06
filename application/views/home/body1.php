@@ -1,62 +1,17 @@
 <body>
-  <div class="row desktop" id="beranda">
-    <div class="col mr-auto">
-      <h1 style="color: #383E56; padding: 5%;"> Kami membantu bisnis Anda agar dapat lebih dijangkau! </h1>
-    </div>
-    <div class="col mr-auto">
-      <h4 style="color: #383E56; padding: 5%; margin-right: 2%;"> Swadaya membantu Anda untuk menemukan rekan, ikon, pangsa, serta acara untuk perkembangan bisnis Anda. </h4>
-      <a class="btn my-2 my-sm-0 font-weight-bold cust-button2" href="#"> Pelajari lebih lanjut </a>
-    </div>
-  </div>
-  
-  <div class="row mobile">
-    <div class="col mr-auto">
-      <h2 style="color: #383E56; padding: 5%;"> Kami membantu bisnis Anda agar dapat lebih dijangkau! </h2>
-    </div>
-    <div class="col mr-auto">
-      <h6 style="color: #383E56; padding: 5%; margin-right: 2%;"> Swadaya membantu Anda untuk menemukan rekan, ikon, pangsa, serta acara untuk perkembangan bisnis Anda. </h6>
-      <a class="btn my-2 my-sm-0 font-weight-bold cust-button2" href="#"> Pelajari lebih lanjut </a>
-    </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      <img width= "100%" src="<?php echo base_url()?>assets/images/index_1.png" style="padding: 2%;">
-    </div>
-  </div>
-
-  <div class="row" id="cara-kerja">
+  <div class="row">
     <img class="title-img" src="<?php echo base_url()?>assets/images/index_2.svg">
   </div>
 
-  <div class="row desktop cust-text" style="padding: 2%;">
+  <div class="row cust-text" style="padding: 2%;">
     <div class="col-sm">
         <img src="<?php echo base_url()?>assets/images/index_3.png" width="75%">
     </div>
     <div class="col-sm desktop cust-text">
-      <div>
-        <h1 class="font-weight-bold"> -01- </h1>
-        <h3 class="font-weight-bold"> Mendaftarkan akun</h3>
-        <p>Dengan mendaftarkan akun Anda, Anda dapat mengakses fitur kolaborasi di Swakarya.</p>
-      </div>
-      <br>
-      <div>
-        <h1 class="font-weight-bold"> -03- </h1>
-        <h3 class="font-weight-bold"> Menelusuri Bisnis Lain</h3>
-        <p>Anda dapat menelusuri bisnis kecil lain yang terdaftar di Swakarya untuk mencari mitra kerja sama atau acara.</p>
-      </div>
-    </div>
-    <div class="col-sm">
-      <div>
-        <h1 class="font-weight-bold"> -02- </h1>
-        <h3 class="font-weight-bold"> Melengkapi Profil Bisnis Anda</h3>
-        <p>Tentunya tidak lengkap apabila Anda tidak melengkapi profil bisnis Anda untuk peluang  kerja sama yang lebih besar.</p>
-      </div>
-      <div>
-        <h1 class="font-weight-bold"> -04- </h1>
-        <h3 class="font-weight-bold"> Memulai Kerja Sama dengan Bisnis Lain!</h3>
-        <p>Tidak ada salahnya menginisiasi kerja sama dengan bisnis kecil lain. Sangat disarankan pula untuk mencantumkan dokumen yang diinginkan calon mitra.</p>
-      </div>
+     <h5>Nama Bisnis</h5>
+     <h4>Lokasi Bisnis</h4>
+     <br>
+     <p>Deskripsi</p>
     </div>
   </div>
 
@@ -119,7 +74,7 @@
     </div>
   </div>
 
-  <div class="row" id="acara-terdekat">
+  <div class="row">
     <img class="title-img" src="<?php echo base_url()?>assets/images/index_4.svg">
   </div>
 
@@ -175,7 +130,7 @@
     </div>
   </div>
 
-  <div class="row" id="galeri">
+  <div class="row">
     <img class="title-img" src="<?php echo base_url()?>assets/images/index_5.svg">
   </div>
 
@@ -228,7 +183,7 @@
     </div>
   </div>
 
-  <div id="carouselExample2" class="carousel slide mobile galeri" data-ride="carousel" style="padding: 2%;">
+  <div id="carouselExample2" class="carousel slide mobile" data-ride="carousel" style="padding: 2%;">
     <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
@@ -265,7 +220,7 @@
     </a>
   </div>
 
-  <div class="row" id="daftar">
+  <div class="row">
     <br><img class="title-img" src="<?php echo base_url()?>assets/images/index_15.svg">
   </div>
 

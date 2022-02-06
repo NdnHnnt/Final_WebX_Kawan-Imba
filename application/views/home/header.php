@@ -23,24 +23,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#beranda" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#cara-kerja" style="text-transform: capitalize; color: #383E56;">CARA KERJA</a>
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">ACARA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#acara-terdekat" style="text-transform: capitalize; color: #383E56;">ACARA TERDEKAT</a>
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">MITRA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#galeri" style="text-transform: capitalize; color: #383E56; ;">GALERI</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#daftar" style="text-transform: capitalize; color: #383E56; ;">DAFTAR</a>
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56; ;">SETELAN</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#daftar"> Masuk  atau  Daftar </a>
+        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Keluar </a>
       </form>
     </div>
   </nav>
-  
