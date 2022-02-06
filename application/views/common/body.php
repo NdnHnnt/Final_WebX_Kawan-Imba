@@ -1,509 +1,303 @@
-<div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-4 col-sm-4">
-                    <div class="info-stat">
-                      <h6>User Registered</h6>
-                      <h4>
-                      <?php
-                        echo $this->CI->viewListUsers() ;
-                      ?>
-                      </h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-4">
-                    <div class="info-stat">
-                      <h6>Reviewer Registered</h6>
-                      <h4>
-                      <?php
-                        echo $this->CI->viewListReviewers() ;
-                      ?>
-                      </h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-4 col-sm-4">
-                    <div class="info-stat">
-                      <h6>Editor Registered</h6>
-                      <h4>
-                      <?php
-                        echo $this->CI->viewListEditors() ;
-                      ?>
-                      </h4>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2>E-Review <br> Landing Page</h2>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="main-green-button scroll-to-section">
-                      <a href="#contact">Join Us!</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="<?php echo base_url()?>assets/images/banner-right-image.png" alt="">
-              </div>
-            </div>
-          </div>
+<body>
+  <div class="row desktop">
+    <div class="col mr-auto">
+      <h1 style="color: #383E56; padding: 5%;"> Kami membantu bisnis Anda agar dapat lebih dijangkau! </h1>
+    </div>
+    <div class="col mr-auto">
+      <h4 style="color: #383E56; padding: 5%; margin-right: 2%;"> Swadaya membantu Anda untuk menemukan rekan, ikon, pangsa, serta acara untuk perkembangan bisnis Anda. </h4>
+      <a class="btn my-2 my-sm-0 font-weight-bold cust-button2" href="#"> Pelajari lebih lanjut </a>
+    </div>
+  </div>
+  
+  <div class="row mobile">
+    <div class="col mr-auto">
+      <h2 style="color: #383E56; padding: 5%;"> Kami membantu bisnis Anda agar dapat lebih dijangkau! </h2>
+    </div>
+    <div class="col mr-auto">
+      <h6 style="color: #383E56; padding: 5%; margin-right: 2%;"> Swadaya membantu Anda untuk menemukan rekan, ikon, pangsa, serta acara untuk perkembangan bisnis Anda. </h6>
+      <a class="btn my-2 my-sm-0 font-weight-bold cust-button2" href="#"> Pelajari lebih lanjut </a>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <img width= "100%" src="<?php echo base_url()?>assets/images/index_1.png" style="padding: 2%;">
+    </div>
+  </div>
+
+  <div class="row">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_2.svg">
+  </div>
+
+  <div class="row desktop cust-text" style="padding: 2%;">
+    <div class="col-sm">
+        <img src="<?php echo base_url()?>assets/images/index_3.png" width="75%">
+    </div>
+    <div class="col-sm desktop cust-text">
+      <div>
+        <h1 class="font-weight-bold"> -01- </h1>
+        <h3 class="font-weight-bold"> Mendaftarkan akun</h3>
+        <p>Dengan mendaftarkan akun Anda, Anda dapat mengakses fitur kolaborasi di Swakarya.</p>
+      </div>
+      <br>
+      <div>
+        <h1 class="font-weight-bold"> -03- </h1>
+        <h3 class="font-weight-bold"> Menelusuri Bisnis Lain</h3>
+        <p>Anda dapat menelusuri bisnis kecil lain yang terdaftar di Swakarya untuk mencari mitra kerja sama atau acara.</p>
+      </div>
+    </div>
+    <div class="col-sm">
+      <div>
+        <h1 class="font-weight-bold"> -02- </h1>
+        <h3 class="font-weight-bold"> Melengkapi Profil Bisnis Anda</h3>
+        <p>Tentunya tidak lengkap apabila Anda tidak melengkapi profil bisnis Anda untuk peluang  kerja sama yang lebih besar.</p>
+      </div>
+      <div>
+        <h1 class="font-weight-bold"> -04- </h1>
+        <h3 class="font-weight-bold"> Memulai Kerja Sama dengan Bisnis Lain!</h3>
+        <p>Tidak ada salahnya menginisiasi kerja sama dengan bisnis kecil lain. Sangat disarankan pula untuk mencantumkan dokumen yang diinginkan calon mitra.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="accordion" class="mobile">
+    <div class="card">
+      <div class="card-header" id="headingOne" >
+        <h5 class="mb-0">
+          <button class="btn btn-link cust-col" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            -01- Mendaftarkan Akun
+          </button>
+        </h5>
+      </div>
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body cust-text">
+          Anda dapat menelusuri bisnis kecil lain yang terdaftar di Swakarya untuk mencari mitra kerja sama atau acara. 
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed cust-col" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            -02- Melengkapi Profil Bisnis Anda
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body cust-text">
+          Tentunya tidak lengkap apabila Anda tidak melengkapi profil bisnis Anda untuk peluang  kerja sama yang lebih besar.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed cust-col" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            -03- Menelusuri Bisnis Lain
+          </button>
+        </h5>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+        <div class="card-body cust-text">
+          Anda dapat menelusuri bisnis kecil lain yang terdaftar di Swakarya untuk mencari mitra kerja sama atau acara.
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingFour">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed cust-col" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            -04- Memulai Kerja Sama dengan<br> Bisnis Lain
+          </button>
+        </h5>
+      </div>
+      <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+        <div class="card-body cust-text">
+          Tidak ada salahnya menginisiasi kerja sama dengan bisnis kecil lain. Sangat disarankan pula untuk mencantumkan dokumen yang diinginkan calon mitra.
         </div>
       </div>
     </div>
   </div>
 
-  <div id="features" class="features section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="features-content">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                  <div class="first-number number">
-                    <h6>01</h6>
-                  </div>
-                  <div class="icon"></div>
-                  <h4>Register Yourself</h4>
-                  <div class="line-dec"></div>
-                  <p>Before using our service, Make sure you have an account or register yourself.</p>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <a href="#contact">
-                <div class="features-item second-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                  <div class="second-number number">
-                    <h6>02</h6>
-                  </div>
-                  <div class="icon"></div>
-                  <h4>Fill out the form </h4>
-                  <div class="line-dec"></div>
-                  <p>Be it an editor or reviewer, you have to fill out our form before accepting or requesting a project.</p>
-                </div>
-                </a>
-              </div>
-              <div class="col-lg-3">
-                <div class="features-item first-feature wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="third-number number">
-                    <h6>03</h6>
-                  </div>
-                  <div class="icon"></div>
-                  <h4>You're set!</h4>
-                  <div class="line-dec"></div>
-                  <p>Once you've done the previous task, you're set to do your things</a> a little.</p>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="features-item second-feature last-features-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="fourth-number number">
-                    <h6>04</h6>
-                  </div>
-                  <div class="icon"></div>
-                  <h4>Check Your Progress</h4>
-                  <div class="line-dec"></div>
-                  <p>Please check your tables regularly, since we'll keep you updated with it</p>
-                </div>
-              </div>
-            </div>
+  <div class="row">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_4.svg">
+  </div>
+
+  <div class="row cust-text2" style="padding: 2%;">
+    <div id="carouselExampleCaptions" class="carousel slide col-sm text-center" data-ride="carousel">
+      <ol class="carousel-indicators my-4">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="<?php echo base_url()?>assets/images/index_6.jpg" class="d-block img-fluid cust-img" alt="...">
+          <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;">
+            <h5 class="font-weight-bold">'Upgrade' Bisnis UMKM Selama Pandemi</h5>
+            <p>23 Januari 2022 | Daring <br> Zoom Meeting </p>
           </div>
         </div>
-        <div class="col-lg-12">
-          <div class="skills-content">
-            <div class="row">
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0s">
-                  <div class="progress" data-percentage="50">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        50%<br>
-                        <span>PHP</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
-                  <div class="progress" data-percentage="20">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        20%<br>
-                        <span>SQL</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s">
-                  <div class="progress" data-percentage="20">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        20%<br>
-                        <span>HTML & CSS</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="skill-item last-skill-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                  <div class="progress" data-percentage="10">
-                    <span class="progress-left">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <span class="progress-right">
-                      <span class="progress-bar"></span>
-                    </span>
-                    <div class="progress-value">
-                      <div>
-                        10%<br>
-                        <span>JavaScript</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="carousel-item">
+          <img src="<?php echo base_url()?>assets/images/index_7.jpg" class="d-block img-fluid cust-img" alt="...">
+          <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;">
+            <h5 class="font-weight-bold">Copywriting untuk Usaha Kecil</h5>
+            <p>31 Januari 2022 | Daring <br> Zoom Meeting </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="<?php echo base_url()?>assets/images/index_8.jpg" class="d-block img-fluid cust-img" alt="...">
+          <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;"">
+            <h5 class="font-weight-bold">Festival Makrame Sidoarjo 2022</h5>
+            <p>1 Februari 2022 - 2 Februari 2022 | Langsung <br> GOR Sidoarjo </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="<?php echo base_url()?>assets/images/index_9.jpg" class="d-block img-fluid cust-img" alt="...">
+          <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;"">
+            <h5 class="font-weight-bold">Festival Penulis Jawa Timur 2022</h5>
+            <p>4 Februari 2022 - 11 Februari 2022 | Langsung <br> JX Expo Surabaya </p>
           </div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div class="col-sm center text-center cust-text">
+        <p>   Acara ini diadakan atas kerja sama antar bisnis di Swakarya dan pemerintah setempat. Acara-acara ini umumnya berupa pelatihan pemasaran ataupun festival produk lokal. </p>
+        <a class="btn my-2 my-sm-0 font-weight-bold cust-button3" href="#"> Telusuri Acara Lain </a>
     </div>
   </div>
 
-  <div id="about" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="left-image wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-            <img src="<?php echo base_url()?>assets/images/about-left-image.png" alt="">
-          </div>
+  <div class="row">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_5.svg">
+  </div>
+
+  <div class="row">
+    <div id="carouselExample1" class="carousel slide col-sm desktop" data-ride="carousel" style="padding:2%">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="First slide">
+                </div>
+            </div>
         </div>
-        <div class="col-lg-6 align-self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-          <div class="section-heading">
-            <h6>About Us</h6>
-            <h2>Kelompok <span>Lima</span></h2>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-sm-4">
-              <div class="about-item">
-                <h4>4</h4>
-                <h6>Members</h6>
-              </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_7.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_8.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_9.jpg" alt="First slide">
+                </div>
+                <div class="col-md-3">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
+                </div>
             </div>
-            <div class="col-lg-4 col-sm-4">
-              <div class="about-item">
-                <h4>1</h4>
-                <h6>Project</h6>
-              </div>
-            </div>
-            <div class="col-lg-4 col-sm-4">
-              <div class="about-item">
-                <h4>E-Review</h4>
-                <h6>Current Project</h6>
-              </div>
-            </div>
-          </div>
-            <p>
-            Kelompok Lima is formed for the purpose of fulfilling our web technology project as well as sharing our knowledge within the subject.
-              <br>
-            Our current members are: <br>
-            - Muhammad Firdho Kustiawan (5027201005) <br>
-            - Nadine Haninta (5027201014) <br>
-            - Sharira Saniane (5027201016) <br>
-            - Rayhan Kurnia Alunantara Wijaya (5027201030)
-            </p>
-          <div class="main-green-button"><a href="#contact">Participate in Our Project</a></div>
         </div>
       </div>
+      <a class="carousel-control-prev" href="#carouselExample1" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <!-- Carousel Control Prev -->
+      <a class="carousel-control-next" href="#carouselExample1" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+      <!-- Carousel Control Next -->
     </div>
   </div>
 
-  <div id="services" class="our-services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
-            <h6>E-Review</h6>
-            <h2>Discover What E-Review <span>Offer</span> To Our <em>Users</em></h2>
-          </div>
+  <div id="carouselExample2" class="carousel slide mobile" data-ride="carousel" style="padding: 2%;">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
         </div>
-      </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_7.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="Third slide">
+        </div>
     </div>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="icon">
-                  <img src="<?php echo base_url()?>assets/images/service-icon-01.png" alt="">
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="right-content">
-                  <h4>Help you fix your paper</h4>
-                  <p>Be it a student or expert, surely you need to write a good paper. Here, we'll help you with it!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="icon">
-                  <img src="<?php echo base_url()?>assets/images/service-icon-02.png" alt="">
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="right-content">
-                  <h4>Find a reliable reviewer</h4>
-                  <p>You might find yourself a reliable reviewer, not closing the possibility of working together in a near future</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="service-item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-            <div class="row">
-              <div class="col-lg-4">
-                <div class="icon">
-                  <img src="<?php echo base_url()?>assets/images/service-icon-03.png" alt="">
-                </div>
-              </div>
-              <div class="col-lg-8">
-                <div class="right-content">
-                  <h4>Seeing your paper in different view</h4>
-                  <p>We tend to have different perspective about a certain topic. Here, we connect you with many people who might be interested in same topic.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-  <div id="portfolio" class="our-portfolio section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="section-heading wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s">
-            <h6>Extra</h6>
-            <h2>Check <em>Our</em> Sliding <span>Gallery</span></h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="loop owl-carousel">
-            <div class="item">
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-01.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 101</h4></a>
-                      <span>Marketing</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-04.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 102</h4></a>
-                      <span>Branding</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-02.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 103</h4></a>
-                      <span>Consulting</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-05.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 104</h4></a>
-                      <span>Artwork</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-03.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 105</h4></a>
-                      <span>Branding</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-06.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 106</h4></a>
-                      <span>Artwork</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-04.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 107</h4></a>
-                      <span>Creative</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="portfolio-item">
-                <div class="thumb">
-                  <img src="<?php echo base_url()?>assets/images/portfolio-01.jpg" alt="">
-                  <div class="hover-content">
-                    <div class="inner-content">
-                      <a href="#"><h4>Awesome Project 108</h4></a>
-                      <span>Consulting</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExample2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
   </div>
 
-  <div id="contact" class="contact-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-delay="0.25s">
-          <div>
-            <div class="row">
-              <div class="col-lg-6 offset-lg-3">
-                <div class="section-heading">
-                  <h6><br>Join Us</h6>
-                  <h2>Fill Out The Form Below To <span>Use</span> Our <em>Services</em> Here</h2>
-                </div>
-              </div>
-              <div class="col-lg-9">
-              <div class="row" align="center">
-              <?php echo form_open_multipart(base_url(). "index.php/Welcome/signingUp")?> 
-                <table id="custom">
-                  <tr>
-                    <td>Nama</td>
-                    <td><input type="text" id="nama" name="nama" width="100" required/></td>
-                  </tr>
-                  <tr>
-                    <td>Username</td>
-                    <td>
-                      <input type="text" id="username" name="username" width="100" required/></td>
-                  </tr>
-                  <tr>
-                    <td>Password</td>
-                    <td>
-                      <input type="password" id="password" name="password" width="100" require_once/></td>
-                  </tr>
-                  <tr>
-                    <td>Email</td>
-                    <td>
-                      <input type="text" id="email" name="email" width="100" pattern="[^ @]*@[^ @]*" required/></td>
-                  </tr>
-                  <tr>
-                      <td>Roles</td>
-                      <td>
-                        <input type="checkbox" id="editor" name="roles[]" value="1" checked/>Editor <br>
-                        <input type="checkbox" id="editor" name="roles[]" value="2"/>Reviewer
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>Photo</td>
-                    <td>
-                      <input type="file" id="userfile" name="userfile" width="50" required/></td>
-                  </tr>
-                </table>
-                    <input type="submit" value="Sign-Up"> <br>
-                    <p align="center">Alreade have an account? please <a href="<?php echo base_url() . 'index.php/welcome/login'; ?>"/> Log In </a></p>
-              </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="contact-info">
-                  <ul>
-                    <li>
-                      <div class="icon">
-                        <img src="<?php echo base_url()?>assets/images/contact-icon-01.png" alt="email icon">
-                      </div>
-                      <a href="#">makelaar@ereview.com</a>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img src="<?php echo base_url()?>assets/images/contact-icon-02.png" alt="phone">
-                      </div>
-                      <a href="#">+62-0888-7821-9721</a>
-                    </li>
-                    <li>
-                      <div class="icon">
-                        <img src="<?php echo base_url()?>assets/images/contact-icon-03.png" alt="location">
-                      </div>
-                      <a href="#">Institut Teknologi Sepuluh Nopember Surabaya</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+  <div class="row">
+    <br><img class="title-img" src="<?php echo base_url()?>assets/images/index_15.svg">
+  </div>
+
+  <div>
+    <div class="container center_div cust-text">
+      <form class="text-center" style="text-align: center;">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label font-weight-bold">Nama Bisnis<span style="color:red">*</span></label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control mb-3" placeholder="Nama Bisnis Anda" name="username" required>
           </div>
         </div>
-      </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label font-weight-bold">Email Bisnis<span style="color:red">*</span></label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control mb-3" placeholder="emailBisnis@example.com" name="email" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label font-weight-bold">Kata Sandi<span style="color:red">*</span></label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control mb-3" placeholder="Password" name="password" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label font-weight-bold">Konfirmasi Kata Sandi<span style="color:red">*</span></label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control mb-3" placeholder="Repeat Password" name="cpassword" required>
+          </div>
+        </div>
+        <button name="submit" class="btn cust-button4">Sign Up</button> <br>
+		    <a class="cust-text font-weight-bold" href="#">Already have an account? Login here</a>
+      </form>
+      <br>
     </div>
-  </div>

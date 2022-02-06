@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,168 +9,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="icon" href="assets/images/swakarya_logo.svg">
     <title>Swakarya - Landing Page</title>
   </head>
-  <style>
-    html{
-      font-family:'Amiko';
-      background-color: #EEDAD1;
-      color: #383E56;
-    }
-
-    div{
-      background-color: #EEDAD1;
-    }
-
-    .carousel-caption {
-    position:inherit;
-    left: 0;
-    top: 0;
-  }
-
-  @media screen and (min-width: 767.55px) {
-    .mobile{
-      display: none;
-    }
-    .title-img{
-      width: 40%;
-      padding-left: 2%;
-      margin-left: 3%;
-    }
-  }
-
-  @media screen and (min-width: 0px) and (max-width:767.54px){
-    .desktop{
-      display: none;
-    }
-    .title-img{
-      width: 50%;
-      padding: 3%;
-      margin-left: 1%;
-    }
-  }
-
-  .card-header{
-    background-color: #383E56;
-    font-family: 'Amiko';
-    color: #EEDAD1;
-  }
-
-  .cust-col{
-    color: #E5E5E5;
-  }
-
-  .cust-col:active{
-    color: #F69E7B;
-  }
-
-  .cust-col:hover{
-    color: #F69E7B;
-  }
-
-  .cust-text{
-    color: #383E56;
-    font-family: 'Amiko';
-  }
-
-  .cust-text2{
-    font-family: 'Amiko';
-    color:#EEDAD1 ;
-  }
-
-  .cust-img {
-    width: 100%; 
-    height: 300px;
-    object-fit: cover
-  }
-
-  .cust-img2 {
-    height: 210px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .cust-img3 {
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  .cust-button1 {
-    border-radius: 0px 10px;
-    background: #383E56;
-    color: #E5E5E5;
-  }
-
-  .cust-button2 {
-    background: #F69E7B;
-    border-radius: 0px 10px 10px 10px;
-    color: #383E56;
-    padding: 1%;
-    margin-left: 5%;
-  }
-
-  .cust-button3{
-    background: #F69E7B;
-    border-radius: 10px 10px 10px 10px;
-    color: #383E56;
-    padding: 1%;
-    margin: 5% 0%;
-  }
-
-  .cust-button4{
-    background-color: #383E56;
-    color: #E5E5E5;
-    border-radius: 10px;
-  }
-
-  .center_div{
-    margin: 0 auto;
-    width:60% /* value of your choice which suits your alignment */
-  }
-
-  input[type="text"],input[type="email"],input[type="password"], textarea {
-    background-color : #D4B5B0; 
-    border: transparent;
-    border-radius: 15;
-  }
-
-  .form-control{
-  -webkit-border-radius: 20;
-     -moz-border-radius: 20;
-          border-radius: 20;
-}
-  .form-control:focus {
-  background-color: #D4B5B0;
-  border-color: #383E56;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #383E56;
-  }
-
-  .form-control::placeholder{
-    color: #EEDAD1;
-  }
-
-  .cust-footer{
-    font-family: 'Amiko';
-    background-color: #383E56;
-    color: #EEDAD1;
-
-  }
-
-  .cust-link:hover{
-    color: #F69E7B;
-  }
-
-  .cust-link{
-    color: #EEDAD1;
-  }
-    
-  </style>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
-      <img src="assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
+      <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -219,17 +63,17 @@
 
   <div class="container-fluid">
     <div class="row">
-      <img width= "100%" src="assets/images/index_1.png" style="padding: 2%;">
+      <img width= "100%" src="<?php echo base_url()?>assets/images/index_1.png" style="padding: 2%;">
     </div>
   </div>
 
   <div class="row">
-    <img class="title-img" src="assets/images/index_2.svg">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_2.svg">
   </div>
 
   <div class="row desktop cust-text" style="padding: 2%;">
     <div class="col-sm">
-        <img src="assets/images/index_3.png" width="75%">
+        <img src="<?php echo base_url()?>assets/images/index_3.png" width="75%">
     </div>
     <div class="col-sm desktop cust-text">
       <div>
@@ -318,7 +162,7 @@
   </div>
 
   <div class="row">
-    <img class="title-img" src="assets/images/index_4.svg">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_4.svg">
   </div>
 
   <div class="row cust-text2" style="padding: 2%;">
@@ -330,28 +174,28 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="assets/images/index_6.jpg" class="d-block img-fluid cust-img" alt="...">
+          <img src="<?php echo base_url()?>assets/images/index_6.jpg" class="d-block img-fluid cust-img" alt="...">
           <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;">
             <h5 class="font-weight-bold">'Upgrade' Bisnis UMKM Selama Pandemi</h5>
             <p>23 Januari 2022 | Daring <br> Zoom Meeting </p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/index_7.jpg" class="d-block img-fluid cust-img" alt="...">
+          <img src="<?php echo base_url()?>assets/images/index_7.jpg" class="d-block img-fluid cust-img" alt="...">
           <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;">
             <h5 class="font-weight-bold">Copywriting untuk Usaha Kecil</h5>
             <p>31 Januari 2022 | Daring <br> Zoom Meeting </p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/index_8.jpg" class="d-block img-fluid cust-img" alt="...">
+          <img src=<?php echo base_url()?>assets/images/index_8.jpg" class="d-block img-fluid cust-img" alt="...">
           <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;"">
             <h5 class="font-weight-bold">Festival Makrame Sidoarjo 2022</h5>
             <p>1 Februari 2022 - 2 Februari 2022 | Langsung <br> GOR Sidoarjo </p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/images/index_9.jpg" class="d-block img-fluid cust-img" alt="...">
+          <img src="<?php echo base_url()?>assets/images/index_9.jpg" class="d-block img-fluid cust-img" alt="...">
           <div class="carousel-caption d-none d-md-block mb-4" style="background-color: #383E56;"">
             <h5 class="font-weight-bold">Festival Penulis Jawa Timur 2022</h5>
             <p>4 Februari 2022 - 11 Februari 2022 | Langsung <br> JX Expo Surabaya </p>
@@ -374,7 +218,7 @@
   </div>
 
   <div class="row">
-    <img class="title-img" src="assets/images/index_5.svg">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/index_5.svg">
   </div>
 
   <div class="row">
@@ -383,32 +227,32 @@
         <div class="carousel-item active">
             <div class="row">
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_10.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_11.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_12.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_13.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="First slide">
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="row">
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_7.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_7.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_8.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_8.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_9.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_9.jpg" alt="First slide">
                 </div>
                 <div class="col-md-3">
-                        <img class="d-block img-fluid cust-img2" src="assets/images/index_10.jpg" alt="First slide">
+                        <img class="d-block img-fluid cust-img2" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
                 </div>
             </div>
         </div>
@@ -417,40 +261,38 @@
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <!-- Carousel Control Prev -->
       <a class="carousel-control-next" href="#carouselExample1" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-      <!-- Carousel Control Next -->
     </div>
   </div>
 
   <div id="carouselExample2" class="carousel slide mobile" data-ride="carousel" style="padding: 2%;">
     <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_10.jpg" alt="First slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_10.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_11.jpg" alt="Second slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_12.jpg" alt="Third slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_13.jpg" alt="Third slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_7.jpg" alt="First slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_7.jpg" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_11.jpg" alt="Second slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_11.jpg" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_12.jpg" alt="Third slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_12.jpg" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 cust-img3" src="assets/images/index_13.jpg" alt="Third slide">
+          <img class="d-block w-100 cust-img3" src="<?php echo base_url()?>assets/images/index_13.jpg" alt="Third slide">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
@@ -464,7 +306,7 @@
   </div>
 
   <div class="row">
-    <br><img class="title-img" src="assets/images/index_15.svg">
+    <br><img class="title-img" src="<?php echo base_url()?>assets/images/index_15.svg">
   </div>
 
   <div>

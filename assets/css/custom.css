@@ -1,0 +1,153 @@
+html{
+    font-family:'Amiko';
+    background-color: #EEDAD1;
+    color: #383E56;
+  }
+
+  div{
+    background-color: #EEDAD1;
+  }
+
+  .carousel-caption {
+  position:inherit;
+  left: 0;
+  top: 0;
+}
+
+@media screen and (min-width: 767.55px) {
+  .mobile{
+    display: none;
+  }
+  .title-img{
+    width: 40%;
+    padding-left: 2%;
+    margin-left: 3%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width:767.54px){
+  .desktop{
+    display: none;
+  }
+  .title-img{
+    width: 50%;
+    padding: 3%;
+    margin-left: 1%;
+  }
+}
+
+.card-header{
+  background-color: #383E56;
+  font-family: 'Amiko';
+  color: #EEDAD1;
+}
+
+.cust-col{
+  color: #E5E5E5;
+}
+
+.cust-col:active{
+  color: #F69E7B;
+}
+
+.cust-col:hover{
+  color: #F69E7B;
+}
+
+.cust-text{
+  color: #383E56;
+  font-family: 'Amiko';
+}
+
+.cust-text2{
+  font-family: 'Amiko';
+  color:#EEDAD1 ;
+}
+
+.cust-img {
+  width: 100%; 
+  height: 300px;
+  object-fit: cover
+}
+
+.cust-img2 {
+  height: 210px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cust-img3 {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cust-button1 {
+  border-radius: 0px 10px;
+  background: #383E56;
+  color: #E5E5E5;
+}
+
+.cust-button2 {
+  background: #F69E7B;
+  border-radius: 0px 10px 10px 10px;
+  color: #383E56;
+  padding: 1%;
+  margin-left: 5%;
+}
+
+.cust-button3{
+  background: #F69E7B;
+  border-radius: 10px 10px 10px 10px;
+  color: #383E56;
+  padding: 1%;
+  margin: 5% 0%;
+}
+
+.cust-button4{
+  background-color: #383E56;
+  color: #E5E5E5;
+  border-radius: 10px;
+}
+
+.center_div{
+  margin: 0 auto;
+  width:60% /* value of your choice which suits your alignment */
+}
+
+input[type="text"],input[type="email"],input[type="password"], textarea {
+  background-color : #D4B5B0; 
+  border: transparent;
+  border-radius: 15;
+}
+
+.form-control{
+-webkit-border-radius: 20;
+   -moz-border-radius: 20;
+        border-radius: 20;
+}
+.form-control:focus {
+background-color: #D4B5B0;
+border-color: #383E56;
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #383E56;
+}
+
+.form-control::placeholder{
+  color: #EEDAD1;
+}
+
+.cust-footer{
+  font-family: 'Amiko';
+  background-color: #383E56;
+  color: #EEDAD1;
+
+}
+
+.cust-link:hover{
+  color: #F69E7B;
+}
+
+.cust-link{
+  color: #EEDAD1;
+}

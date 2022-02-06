@@ -2,77 +2,41 @@
 <html lang="en">
 
   <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <title>E-Review!</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo base_url()?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/fontawesome.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/templatemo-seo-dream.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/animated.css">
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/owl.css">
-<!--
-
-TemplateMo 563 SEO Dream
-
-https://templatemo.com/tm-563-seo-dream
-
--->
-
-</head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+    <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
+    <link rel="icon" href="<?php echo base_url()?>assets/images/swakarya_logo.svg">
+    <title>Swakarya - Landing Page</title>
+  </head>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
+    <a class="navbar-brand" href="#">
+      <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">CARA KERJA</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">ACARA TERDEKAT</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56; ;">GALERI</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Masuk  atau  Daftar </a>
+      </form>
     </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="#" class="logo">
-              <h4>E-Review <img src="<?php echo base_url()?>assets/images/logo-icon.png" alt=""></h4>
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section"><a href="#features">Workflow</a></li>
-              <li class="scroll-to-section"><a href="#about">About Us</a></li>
-              <li class="scroll-to-section"><a href="#services">Service</a></li>
-              <li class="scroll-to-section"><a href="#portfolio">Extra</a></li>
-              <li class="scroll-to-section"><div class="main-blue-button"><a href="#contact">Register or Log In</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>  
-<!-- ***** Header Area End ***** -->
+  </nav>
