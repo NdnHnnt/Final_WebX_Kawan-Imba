@@ -9,7 +9,21 @@ Class Master extends CI_Model
 Home
 #########
 */
-    
+    function getListEvents($id_user){
+    $query7 ="SELECT judul, kata_kunci, file_penugasan, penugasan_status, id_reviewer
+                FROM assign
+                WHERE assign.user_id =" .$id_user;
+    $res7 = $this->db->query($query7);
+    return $res7->result_array();
+    }
+
+    function getListUsers($id_user){
+    $query0 ="SELECT user_id, user_nama, user_pic, user_loc
+            FROM users
+            WHERE users.user_id <> " .$id_user;
+    $res0 = $this->db->query($query0);
+    return $res0->result_array();
+    }
 
 /*
 #########
@@ -21,13 +35,6 @@ Welcome
     $res2 = $this->db->query($query2 );
 
      return $res2->result_array();
-    }
-
-    function getListUsers($stts=1) {
-    $query3 = "SELECT * FROM user WHERE user_status = " . $stts ;
-    $res3 = $this->db->query($query3 );
-
-    return $res3->result_array();
     }
 /*
 #########
@@ -109,6 +116,8 @@ Editorctl
         $res7 = $this->db->query($query7);
         return $res7->result_array();
     }
+
+    
 
     function getReviewedPapers($id_user){
         $this->db->select('id_editor');

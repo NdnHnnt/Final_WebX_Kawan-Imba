@@ -12,7 +12,41 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
     <link rel="icon" href="<?php echo base_url()?>assets/images/swakarya_logo.svg">
     <title>Swakarya - Landing Page</title>
+    <script src="https://kit.fontawesome.com/cd64ac8a0b.js" crossorigin="anonymous"></script>
   </head>
+  <!--
+  <style>
+  .cust-button5 {
+  border-radius: 0px 10px 10px 10px;
+  background: #F69E7B;
+  color: #383E56;
+  }
+  
+  .cust-button6 {
+  border-radius: 10px;
+  background: #383E56;
+  color: #E5E5E5;
+  }
+  .cust-link2:hover{
+  color: #F69E7B;
+  }
+
+.cust-link2{
+  color: #383E56;
+  }
+
+  .cust-img4 {
+  width: 100%; 
+  height: 500px;
+  object-fit: cover;
+  border-radius:0px 0px 0px 20px;
+  }
+
+  .half-line {
+  line-height: .25em;
+  }
+  </style>
+-->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
       <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
@@ -23,20 +57,20 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
+          <a class="nav-link font-weight-bold" href="#beranda" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">ACARA</a>
+          <a class="nav-link font-weight-bold" href="#acara" style="text-transform: capitalize; color: #383E56;">ACARA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56;">MITRA</a>
+          <a class="nav-link font-weight-bold" href="#mitra" style="text-transform: capitalize; color: #383E56;">MITRA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="#" style="text-transform: capitalize; color: #383E56; ;">SETELAN</a>
+          <a class="nav-link font-weight-bold" href="?php echo base_url()?>homectl/setting" style="text-transform: capitalize; color: #383E56; ;">SETELAN</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Keluar </a>
+        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Hai <?php echo $this->session->userdata('logged_in')["user_nama"];?>! </a>
       </form>
     </div>
   </nav>

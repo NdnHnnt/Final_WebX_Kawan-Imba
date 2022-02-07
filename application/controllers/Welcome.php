@@ -38,13 +38,11 @@ class Welcome extends CI_Controller {
 		}
 		else {
 			$session_data = $this->session->userdata('logged_in');
-			switch ($session_data['user_id']){
-				case (MYSQLI_NOT_NULL_FLAG):
-					redirect('homectl');
-					break;
-				default:
-					redirect('welcome');
-					break;
+			if ($session_data){
+				redirect('homectl');
+			}
+			else{
+				redirect('welcome');
 			}
 			return;
 		}
@@ -80,7 +78,7 @@ class Welcome extends CI_Controller {
 		$res = $this->form_validation->run();
 		if ($res == FALSE){
 			$error = array('error' => validation_errors());
-			$this->load->view('common/header_back');
+			$this->load->view('common/header');
 			$this->load->view('common/signup', $error);
 			$this->load->view('common/footer');
 			return FALSE;
@@ -129,7 +127,7 @@ class Welcome extends CI_Controller {
 		if ($res == FALSE){
 			$msg = validation_errors();
 			$this->load->view('common/header');
-			$this->load->view('login');
+			$this->load->view('common/login');
 			$this->load->view('common/footer');
 			return FALSE;
 		}
@@ -147,17 +145,20 @@ class Welcome extends CI_Controller {
 			$sess_array = array(
                 'user_id'=>$user[0]['user_id'],
                 'user_nama'=>$user[0]['user_nama'],
-				'user_email'=>$user[0]['user_email']);
+				'user_email'=>$user[0]['user_email'],
+				'user_loc'=>$user[0]['user_loc'],
+				'user_pic'=>$user[0]['user_pic'],
+				'user_des'=>$user[0]['user_des']);
             $this->session->set_userdata('logged_in', $sess_array);
 
-			switch ($user[0]['user_id']){
-				case (MYSQLI_NOT_NULL_FLAG):
-					redirect('homectl');
-					break;
-				default:
-					redirect('welcome');
-					break;
+			$session_data = $this->session->userdata('logged_in');
+			if ($session_data){
+				redirect('homectl');
 			}
+			else{
+				redirect('welcome');
+			}
+			return;
 		}
 	}
 

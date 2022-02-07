@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class editorctl extends CI_Controller {
+class homectl extends CI_Controller {
 	
 	public function __construct() {
         parent::__construct();
@@ -9,7 +9,10 @@ class editorctl extends CI_Controller {
     }
 	
 	public function index(){
-
+		//if(!$this->session->userdata('logged_in')){
+		//	redirect('welcome/login');
+		//}
+		/*
 		$this->load->model('master');
 		$results1 = $this->master->getListReviewers();
 		$data1['reviewers'] = $results1;
@@ -27,6 +30,25 @@ class editorctl extends CI_Controller {
 		$this->load->view("editor/body3");
 		$this->load->view("editor/body4",$data1);
         $this->load->view("editor/footer");
+		
+
+		$session_data = $this->session->userdata('logged_in');
+        $id_user = $session_data["user_id"];
+		$results1 = $this->master->getListEvents($id_user);
+		$data1['my_events'] = $results1;
+			
+			
+*/		
+		$this->load->model('master');
+			$session_data = $this->session->userdata('logged_in');
+			$id_user = $session_data["user_id"];
+			$results2 = $this->master->getListUsers($id_user);
+			$data2['other_user'] = $results2;
+		$this->load->model('master');
+		$this->load->view("home/header");
+		$this->load->view("home/body1");
+		$this->load->view("home/body2", $data2);
+		$this->load->view("home/footer");
 	}
 
 	public function viewTaskRequested(){
