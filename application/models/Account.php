@@ -27,8 +27,7 @@ Class account extends CI_Model
         return [];
     }
 
-    function updateProfile($id_user,$newProf)
-    {
+    function updateProfile($id_user,$newProf){
         $newName = $this->input->post('nama');
         $newAcc = $this->input->post('rekening');
         $newBid = $this->input->post('bidang');

@@ -46,28 +46,39 @@
   <div class="row" id="acara-anda">
     <img class="title-img" src="<?php echo base_url()?>assets/images/home_1.svg">
   </div>
-  <!--
+  <div style="padding-left: 3%;">
+  <div class="row">
   <?php $i=0;
-    if (sizeof($event)>0){
-      foreach ($event as $item) {
+    if (sizeof($my_events)>0){
+      foreach ($my_events as $item) {
         $i++; ?>
-  <div class="col-sm-4">
-    <div class="card" style="width: 18rem; padding: 2%">
-      <img class="card-img-top" src="<?php echo base_url()?>/img/Events/<?php echo $item['event_pic'] ?>" alt="${item.title}">
-      <div class="card-body">
-        <h5 class="card-title"><?php echo $item['event_name'] ?></h5>
+    <div class="card cust-ran1" style="width: 18rem; padding: 2%; margin: 0.5%">
+      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/<?php echo $item['event_pic'] ?>" alt="${item.title}">
+      <div class="card-body card-cust1">
+        <h5 class="card-title font-weight-bold"><?php echo $item['event_name'] ?></h5>
         <p class="card-text"><?php echo $item['event_date'] ?></p>
         <p class="card-text"><?php echo $item['event_type'] ?></p>
         <p class="card-text"><?php echo $item['event_loc'] ?></p>
-        <a target="_blank" href="homectl/event/<?php echo $item['event_id']?>" class="btn btn-primary" style="background-color: rgb(33, 133, 99);">Read more</a>
+        <a href="homectl/event/<?php echo $item['event_id']?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>
       </div>
     </div>
-  </div>
-  <?php } 
+    <?php } 
   }
   else { 
 
   }?>
-  -->
+    <div class="card cust-ran1" style="width: 18rem; padding: 2%; margin: 0.5%">
+      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
+      <div class="card-body card-cust1">
+        <h5 class="card-title font-weight-bold">Cari Acara Lain</h5>
+        <a href="" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Acara Lain</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <br>
+  </div>
+  
   
 

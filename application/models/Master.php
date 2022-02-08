@@ -10,9 +10,9 @@ Home
 #########
 */
     function getListEvents($id_user){
-    $query7 ="SELECT judul, kata_kunci, file_penugasan, penugasan_status, id_reviewer
-                FROM assign
-                WHERE assign.user_id =" .$id_user;
+    $query7 ="SELECT events.*
+                FROM events, assign
+                WHERE assign.assign_event=events.event_id AND assign.assign_user = " .$id_user;
     $res7 = $this->db->query($query7);
     return $res7->result_array();
     }

@@ -9,9 +9,9 @@ class homectl extends CI_Controller {
     }
 	
 	public function index(){
-		//if(!$this->session->userdata('logged_in')){
-		//	redirect('welcome/login');
-		//}
+		if(!$this->session->userdata('logged_in')){
+			redirect('welcome/login');
+		}
 		/*
 		$this->load->model('master');
 		$results1 = $this->master->getListReviewers();
@@ -40,13 +40,14 @@ class homectl extends CI_Controller {
 			
 */		
 		$this->load->model('master');
-			$session_data = $this->session->userdata('logged_in');
-			$id_user = $session_data["user_id"];
+		$session_data = $this->session->userdata('logged_in');
+		$id_user = $session_data["user_id"];
+		$results1 = $this->master->getListEvents($id_user);
+		$data1['my_events'] = $results1;
 			$results2 = $this->master->getListUsers($id_user);
 			$data2['other_user'] = $results2;
-		$this->load->model('master');
 		$this->load->view("home/header");
-		$this->load->view("home/body1");
+		$this->load->view("home/body1", $data1);
 		$this->load->view("home/body2", $data2);
 		$this->load->view("home/footer");
 	}
@@ -70,7 +71,7 @@ class homectl extends CI_Controller {
 
 		return sizeof($results) . '<br>';
 	}
-
+/*
     public function selectedRoles() {
 		$id_user = $this->session->userdata('logged_in')["id_akun"];
 		$this->load->model('master');
@@ -78,7 +79,7 @@ class homectl extends CI_Controller {
 		//var_dump($results1);
 		return sizeof($results1);
 	}
-
+*/
 	public function addingTask(){
 		$this->load->helper(array('form', 'url'));
 		$this->load->view("common/header_back");

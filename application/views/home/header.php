@@ -47,6 +47,38 @@
   }
   </style>
 -->
+  <style>
+    .cust-ran1{
+      background-color: #383E56;
+      border: transparent;
+    }
+
+    .cust-ran2{
+      background-color: #F69E7B;
+      border: transparent;
+    }
+
+    .card-cust1{
+      background-color: #383E56;
+      color: #EEDAD1;
+      align-items: center;
+      padding: 2%;
+    }
+
+    .card-cust2{
+      background-color: #F69E7B;
+      color: #383E56;
+      align-items: center;
+      padding: 2%;
+    }
+
+    .cust-button7{
+  border-radius: 10px;
+  background: #D4B5B0;
+  color: #383E56;
+}
+
+  </style>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
       <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
