@@ -52,6 +52,83 @@ class homectl extends CI_Controller {
 		$this->load->view("home/footer");
 	}
 
+
+	public function viewTheEvents(){
+		$this->load->model('master');
+		$session_data = $this->session->userdata('logged_in');
+		$id_user = $session_data["user_id"];
+		$results3 = $this->master->getListEvents($id_user);
+		$data3['my_events'] = $results3;
+			$results4 = $this->master->getListAllEvents($id_user);
+			$data4['other_events'] = $results4;
+		$this->load->view("home/header2");
+		$this->load->view("home/body3", $data3);
+		$this->load->view("home/body4", $data4);
+		$this->load->view("home/footer2");
+
+	}
+
+	public function viewEvent($id_event){
+		$this->load->model('master');
+		$session_data = $this->session->userdata('logged_in');
+		$id_user = $session_data["user_id"];
+		$results3 = $this->master->getListEvents($id_user);
+		$data3['my_events'] = $results3;
+			$results4 = $this->master->getListAllEvents($id_user);
+			$data4['other_events'] = $results4;
+		$this->load->view("home/header2");
+		$this->load->view("home/body3", $data3);
+		$this->load->view("home/body4", $data4);
+		$this->load->view("home/footer2");
+	}
+
+	public function editProfile()
+	{
+		$this->load->helper(array('form', 'url', 'security'));
+		$this->load->model('Account');
+
+		$this->load->library(array('form_validation'));
+
+		$this->form_validation->set_rules('nama',
+		'Nama', 'trim|min_length[2]|max_length[128]|xss_clean');
+
+		$res = $this->form_validation->run();
+		if($res == FALSE) {
+			$error = array('error' => validation_errors());
+			$this->load->view("common/header_back");
+			$this->load->view("reviewer/editProfile", $error);
+			$this->load->view("reviewer/footer");
+			return FALSE;
+		}
+
+		$config['upload_path']		= 'img/Users/';
+		$config['allowed_types']	= 'png|jpg|jpeg';
+		$config['max_size']			= 10000;
+
+		$newName = time() . '_' . $_FILES["gambar"]['name'];
+		$config['file_name'] = $newName;
+
+		$this->load->library('upload', $config);
+		if( ! $this->upload->do_upload('gambar')) //userfile -> field yang telah dideclare di signup
+		{
+			//jika gagal upload
+			$error = array('error' => $this->upload->display_errors());
+			$this->load->view("common/header_back");
+			$this->load->view("reviewer/editProfile", $error);
+			$this->load->view("reviewer/footer"); 
+			return;
+		}
+		$session_data = $this->session->userdata('logged_in');
+            $id_user = $session_data["id_akun"];
+		$data = array('upload_data' => $this->upload->data());
+		//insert data akun ke database => query
+		$this->Account->updateProfile($id_user, $newName);
+		$this->load->view("common/header_back");
+		$this->load->view("reviewer/uploadSuccess");
+		$this->load->view("reviewer/footer");
+		return;
+	}
+
 	public function viewTaskRequested(){
 		
 			$session_data = $this->session->userdata('logged_in');

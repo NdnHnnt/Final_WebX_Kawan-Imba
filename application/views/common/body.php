@@ -269,6 +269,43 @@
     <br><img class="title-img" src="<?php echo base_url()?>assets/images/index_15.svg">
   </div>
 
+<div class="container-fluid">
+  <div class="row center_div">
+        <div class="col-md-6">
+            <?php echo form_open_multipart(base_url(). "index.php/Welcome/signingUp")?>
+                <div class="row">
+                    <label for="nama_bisnis" class="col-sm-10 col-form-label">Nama Bisnis</label>
+                        <div class="col-sm-20">
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                </div>
+                <div class="row">
+                    <label for="email_bisnis" class="col-sm-10 col-form-label">Email Bisnis</label>
+                        <div class="col-sm-20">
+                            <input type="text" class="form-control" id="email" name="email" pattern="[^ @]*@[^ @]*" requiredd>
+                        </div>
+                </div>
+                <div class="row">
+                    <label for="password" class="col-sm-10 col-form-label">Kata Sandi</label>
+                        <div class="col-sm-20">
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                </div>
+                <div class="row">
+                    <label for="Gambar" class="form-label">Foto Profil Bisnis</label>
+                    <div class="col-sm-20">
+                    <input type="file" id="userfile" name="userfile" required/>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-end"></div>
+                    <div class="col-sm">
+                        <input class="btn btn-primary" type="submit" value="Upload">
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--
   <div>
     <div class="center_div cust-text col-6" align="center">
         <?php echo form_open_multipart(base_url(). "index.php/Welcome/signingUp")?> 
@@ -301,3 +338,4 @@
           <p align="center">Sudah punya akun bisnis? masuk di<a href="<?php echo base_url() . 'index.php/welcome/login'; ?>"/> sini </a></p>
     </div>
   <div>
+-->

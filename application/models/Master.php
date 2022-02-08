@@ -10,19 +10,31 @@ Home
 #########
 */
     function getListEvents($id_user){
-    $query7 ="SELECT events.*
+    $query00 ="SELECT events.*
                 FROM events, assign
                 WHERE assign.assign_event=events.event_id AND assign.assign_user = " .$id_user;
-    $res7 = $this->db->query($query7);
-    return $res7->result_array();
+    $res00 = $this->db->query($query00);
+    return $res00->result_array();
     }
 
     function getListUsers($id_user){
-    $query0 ="SELECT user_id, user_nama, user_pic, user_loc
+    $query01 ="SELECT user_id, user_nama, user_pic, user_loc
             FROM users
             WHERE users.user_id <> " .$id_user;
-    $res0 = $this->db->query($query0);
-    return $res0->result_array();
+    $res01 = $this->db->query($query01);
+    return $res01->result_array();
+    }
+
+    function getListAllEvents($id_user){
+    $query02 ="SELECT events.*
+            FROM events, assign
+            WHERE assign.assign_event=events.event_id AND assign.assign_user <> " .$id_user;
+    $res02 = $this->db->query($query02);
+    return $res02->result_array();    
+    }
+
+    function viewTheEvents(){
+        
     }
 
 /*
