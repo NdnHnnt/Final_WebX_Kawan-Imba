@@ -61,12 +61,22 @@ class homectl extends CI_Controller {
 		$data3['my_events'] = $results3;
 			$results4 = $this->master->getListAllEvents($id_user);
 			$data4['other_events'] = $results4;
-		$this->load->view("home/header2");
+		$this->load->view("home/header");
 		$this->load->view("home/body3", $data3);
 		$this->load->view("home/body4", $data4);
-		$this->load->view("home/footer2");
+		$this->load->view("home/footer");
 
 	}
+	public function viewUser($id_user){
+		$this->load->model('master');
+		$results7 = $this->master->getInfo($id_user);
+		$data7['this_user'] = $results7;
+
+		$this->load->view("home/header");
+		$this->load->view("home/body6", $data7);
+		$this->load->view("home/footer");
+	}
+
 //FRONTEND BELUM
 	public function viewEvent($id_event){
 		$this->load->model('master');
@@ -74,17 +84,17 @@ class homectl extends CI_Controller {
 		$data5['events'] = $results5;
 			$results6 = $this->master->viewParticipants($id_event);
 			$data6['other_events'] = $results6;
-		$this->load->view("home/header2");
+		$this->load->view("home/header");
 		$this->load->view("home/body3", $data5);
 		$this->load->view("home/body4", $data6);
-		$this->load->view("home/footer2");
+		$this->load->view("home/footer");
 	}
 
 	public function Edit(){	
 		$this->load->helper(array('form', 'url'));
-		$this->load->view("home/header3"); //header
+		$this->load->view("home/header"); //header
 		$this->load->view("home/body5", array("error" => "")); //body $id_user
-		$this->load->view("home/footer2"); //footer
+		$this->load->view("home/footer"); //footer
 		return;
 	}
 

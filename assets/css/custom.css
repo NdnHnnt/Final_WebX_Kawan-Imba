@@ -8,6 +8,10 @@ html{
     background-color: #EEDAD1;
   }
 
+  a{
+    font-family: 'Amiko';
+  }
+
   .carousel-caption {
   position:inherit;
   left: 0;

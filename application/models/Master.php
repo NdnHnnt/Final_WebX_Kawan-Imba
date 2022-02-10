@@ -49,6 +49,14 @@ Home
     return $res04->result_array();    
     }
 
+    function getInfo($id_user){
+    $query05 ="SELECT users.*
+        FROM users
+        WHERE user_id = " .$id_user;
+    $res05 = $this->db->query($query05);
+    return $res05->result_array();    
+    }
+
 
 /*
 #########

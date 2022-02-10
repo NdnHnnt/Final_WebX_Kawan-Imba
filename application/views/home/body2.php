@@ -13,7 +13,7 @@
       <div class="card-body card-cust2">
         <h5 class="card-title font-weight-bold"> <?php echo $item['user_nama'] ?></h5>
         <p class="card-text"><?php echo $item['user_loc'] ?></p>
-        <a href="<?php echo $item['user_id']?>" class="btn cust-button4 font-weight-bold" style="color:#F69E7B">Lihat Bisnis</a>
+        <a href="<?php echo base_url()?>index.php/homectl/viewUser/<?php echo $item['user_id']?>" class="btn cust-button4 font-weight-bold" style="color:#F69E7B">Lihat Bisnis</a>
       </div>
     </div>
   <?php }
