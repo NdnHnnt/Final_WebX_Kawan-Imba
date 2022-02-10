@@ -14,6 +14,7 @@
     <title>Swakarya - Landing Page</title>
     <script src="https://kit.fontawesome.com/cd64ac8a0b.js" crossorigin="anonymous"></script>
   </head>
+
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
       <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
@@ -33,7 +34,7 @@
           <a class="nav-link font-weight-bold" href="#mitra" style="text-transform: capitalize; color: #383E56;">MITRA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="?php echo base_url()?>homectl/setting" style="text-transform: capitalize; color: #383E56; ;">SETELAN</a>
+          <a class="nav-link font-weight-bold" href="<?php echo base_url()?>homectl/setting" style="text-transform: capitalize; color: #383E56; ;">SETELAN</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

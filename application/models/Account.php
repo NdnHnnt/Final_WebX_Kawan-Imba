@@ -27,33 +27,70 @@ Class account extends CI_Model
         return [];
     }
 
+    function getTheUser($id_user){
+        $thequery = "SELECT * FROM users
+                    WHERE user_id=" . $id_user;
+        $res = $this->db->query($thequery);
+        $user = $res->result_array();
+        //cek jika user berjumlah satu atau lebih
+        if (count($user)>0){
+            //mengembalikan user
+            return $user;
+        }
+        //jika tidak, kembalikan nilai -1
+        return [];
+    }
+
     function updateProfile($id_user,$newProf){
-        $newName = $this->input->post('nama');
-        $newAcc = $this->input->post('rekening');
-        $newBid = $this->input->post('bidang');
+        $newName = $this->input->post('username');
+        $newPass = MD5($this->input->post('password'));
+        $newMail = $this->input->post('email');
+        $newLoc = $this->input->post('location');
+        $newInsta = $this->input->post('instagram');
+        $newWA = $this->input->post('whatsapp');
+        $newTelegram = $this->input->post('telegram');
+        $newLink = $this->input->post('link');
+        $newDes = $this->input->post('des');
         
-        $this->db->set("nama", $newName);
-        $this->db->where('id_user', $id_user);
-        $this->db->update('user');
+        $this->db->set("user_nama", $newName);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_password", $newPass);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
         
-        $this->db->set("bidang_ilmu", $newBid);
-        $this->db->where('id_user', $id_user);
-        $this->db->update('reviewer');
-        
-        $this->db->set("no_rekening", $newAcc);
-        $this->db->where('id_user', $id_user);
-        $this->db->update('reviewer');
+        $this->db->set("user_email", $newMail);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
 
-        $this->db->set("photo", $newProf);
-        $this->db->where('id_user', $id_user);
-        $this->db->update('user');
+        $this->db->set("user_loc", $newLoc);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
 
+        $this->db->set("user_insta", $newInsta);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
 
-        // $this->db->select('email');
-        // $this->db->form('users');
-        // $this->db->where('users.id_user', $id_user);
-        // $result = $this->db->->get()->result_array();
-        // $email  = $result[0]['email'];
+        $this->db->set("user_wa", $newWA);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_telegram", $newTelegram);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_shop", $newLink);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_des", $newDes);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_pic", $newProf);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
     }
 }
 ?>

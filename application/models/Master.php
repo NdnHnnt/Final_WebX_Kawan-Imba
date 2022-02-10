@@ -33,9 +33,22 @@ Home
     return $res02->result_array();    
     }
 
-    function viewTheEvents(){
-        
+    function viewSpecificEvent($id_event){
+    $query03 ="SELECT events.*
+        FROM events
+        WHERE events.event_id <> " .$id_event;
+    $res03 = $this->db->query($query03);
+    return $res03->result_array();      
     }
+
+    function viewParticipants($id_event){
+    $query04 ="SELECT users.*
+        FROM users, assign
+        WHERE assign.assign_event <> " .$id_event;
+    $res04 = $this->db->query($query04);
+    return $res04->result_array();    
+    }
+
 
 /*
 #########
@@ -60,16 +73,6 @@ Common
                 AND user.id_user = " .$id_user;
         $res4 = $this->db->query($query4 );
     return $res4->result_array();
-    }
-
-    function getImage($id_user){
-        $this->db->select('photo');
-        $this->db->from('user');
-        $this->db->where('id_user', $id_user);
-            $result = $this->db->get()->result_array();
-            $image = $result[0]['photo'];
-        
-        return $image;
     }
 
 /*

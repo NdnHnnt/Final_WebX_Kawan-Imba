@@ -146,8 +146,14 @@ class Welcome extends CI_Controller {
                 'user_id'=>$user[0]['user_id'],
                 'user_nama'=>$user[0]['user_nama'],
 				'user_email'=>$user[0]['user_email'],
+				'user_cat1'=>$user[0]['user_cat1'],
+				'user_cat2'=>$user[0]['user_cat2'],
 				'user_loc'=>$user[0]['user_loc'],
 				'user_pic'=>$user[0]['user_pic'],
+				'user_insta'=>$user[0]['user_insta'],
+				'user_wa'=>$user[0]['user_wa'],
+				'user_telegram'=>$user[0]['user_telegram'],
+				'user_shop'=>$user[0]['user_shop'],
 				'user_des'=>$user[0]['user_des']);
             $this->session->set_userdata('logged_in', $sess_array);
 
