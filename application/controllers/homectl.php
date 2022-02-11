@@ -81,9 +81,12 @@ class homectl extends CI_Controller {
 		$this->load->model('master');
 		$results8 = $this->master->getEvent($id_event);
 		$data8['this_event'] = $results8;
+			$results10= $this->master->getParticipants($id_event);
+			$data10['part'] = $results10;
 
 		$this->load->view("home/header");
 		$this->load->view("home/body9", $data8);
+		$this->load->view("home/body10", $data10);
 		$this->load->view("home/footer");
 	}
 
@@ -151,14 +154,6 @@ class homectl extends CI_Controller {
 		//insert data akun ke database => query
 		$id_user = $this->master->CreateNewEvent($newName, $userPass);
 		redirect('homectl/viewTheEvents');
-		/*
-		$results9 = $this->master->getType();
-			$data9['eve'] = $results9;
-		$this->load->view('home/header');
-		$this->load->view('home/body8', $data9);
-		$this->load->view('home/footer');
-		return;
-	*/	
 	}
 
 //FRONTEND BELUM

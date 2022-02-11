@@ -1,11 +1,11 @@
   <div class="row" id="cari-mitra">
-    <img class="title-img" src="<?php echo base_url()?>assets/images/home_2.svg">
+    <img class="title-img" src="<?php echo base_url()?>assets/images/home_7.svg">
   </div>
   <div style="padding-left: 3%;">
   <div class="row">
   <?php $i=0;
-    if (sizeof($other_user)>0){
-      foreach ($other_user as $item) {
+    if (sizeof($part)>0){
+      foreach ($part as $item) {
         $i++; 
         if ($i < 4){?>
     <div class="card cust-ran2" style="width: 18rem; padding: 2%; margin: 0.5%">
@@ -34,9 +34,16 @@
     <div class="card cust-ran2" style="width: 18rem; padding: 2%; margin: 0.5%">
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
       <div class="card-body card-cust2 text-center">
-        <h5 class="card-title font-weight-bold">Cari Bisnis Lain</h5>
-        <p class="card-text">Lihat bisnis lain yang tergabung dalam Swakarya</p>
-        <a href="homectl/viewAllUser" class="btn font-weight-bold cust-button4" style="color:#F69E7B">Lihat Bisnis Lain</a>
+        <h5 class="card-title font-weight-bold">
+          <?php
+          if (sizeof($part)>3){
+            echo "Dan ", sizeof($part)-3, " pendaftar lainnya";
+          }
+          else{
+            echo "Ajak Teman Anda!";
+          }
+          ?>
+        </h5>
       </div>
     </div>
   </div>

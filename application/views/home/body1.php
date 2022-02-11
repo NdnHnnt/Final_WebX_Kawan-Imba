@@ -63,9 +63,9 @@
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/<?php echo $item['event_pic'] ?>" alt="${item.title}">
       <div class="card-body card-cust1 text-center ">
         <h5 class="card-title font-weight-bold"><?php echo $item['event_name'] ?></h5>
-        <p class="card-text"><?php echo $item['event_date'] ?></p>
-        <p class="card-text"><?php echo $item['event_type'] ?></p>
-        <p class="card-text"><?php echo $item['event_loc'] ?></p>
+        <p class="card-text"><?php echo $item['event_date'] ?><br>
+        <?php echo $this->CI->getEvType($item['event_type']) ?> <br>
+        <?php echo $item['event_loc'] ?></p>
         <a href="homectl/specificEvent/<?php echo $item['event_id']?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>
       </div>
     </div>
@@ -79,6 +79,7 @@
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
       <div class="card-body card-cust1 text-center ">
         <h5 class="card-title font-weight-bold">Cari Acara Lain</h5>
+        <p class="card-text">Lihat acara lain yang terdaftar dalam Swakarya</p>
         <a href="<?php echo base_url()?>index.php/homectl/viewTheEvents" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Acara Lain</a>
       </div>
     </div>
