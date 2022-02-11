@@ -27,7 +27,7 @@
           <a class="nav-link font-weight-bold" href="<?php echo base_url()?>index.php/homectl" style="text-transform: capitalize; color: #383E56;">BERANDA</a>
         </li>
         <li class="nav-item active">
-          <a class="nav-link font-weight-bold" href="<?php echo base_url()?>index.php/homectl" style="text-transform: capitalize; color: #383E56;">ACARA</a>
+          <a class="nav-link font-weight-bold" href="<?php echo base_url()?>index.php/homectl/viewTheEvents" style="text-transform: capitalize; color: #383E56;">ACARA</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link font-weight-bold" href="<?php echo base_url()?>index.php/homectl" style="text-transform: capitalize; color: #383E56;">MITRA</a>

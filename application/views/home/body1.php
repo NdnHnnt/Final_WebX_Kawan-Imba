@@ -73,7 +73,7 @@
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
       <div class="card-body card-cust1">
         <h5 class="card-title font-weight-bold">Cari Acara Lain</h5>
-        <a href="" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Acara Lain</a>
+        <a href="<?php echo base_url()?>index.php/homectl/viewTheEvents" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Acara Lain</a>
       </div>
     </div>
   </div>

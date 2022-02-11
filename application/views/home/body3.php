@@ -1,7 +1,4 @@
 <body>
-  <div class="row" id="">
-    <a class="back-img" href="<?php echo base_url()?>index.php/homectl"><img src="<?php echo base_url()?>assets/images/back.svg"></a>
-  </div>
   <div class="row half-line" id="">
     <br><br>
   </div>

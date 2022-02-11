@@ -298,7 +298,7 @@
       </div>
      <div class="container-fluid center_div" align="center">
       <input class="btn cust-button4" type="submit" value="Sign-Up"> <br>
-      </div>
+    </div>
   </form>
   </div>
   <p align="center">Sudah punya akun bisnis? masuk di<a href="<?php echo base_url() . 'index.php/welcome/login'; ?>"/> sini </a></p>

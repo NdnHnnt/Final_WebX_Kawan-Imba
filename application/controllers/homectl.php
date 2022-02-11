@@ -104,13 +104,13 @@ class homectl extends CI_Controller {
 		$this->load->library(array('form_validation'));
 
 		$this->form_validation->set_rules('username',
-		'Username', 'trim|min_length[2]|max_length[128]|xss_clean');
+		'Username', 'min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('password',
-		'Password', 'trim|min_length[2]|max_length[128]|xss_clean');
+		'Password', 'min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('email',
 		'Email', 'trim|min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('location',
-		'Location', 'trim|min_length[2]|max_length[256]|xss_clean');
+		'Location', 'min_length[2]|max_length[256]|xss_clean');
 		$this->form_validation->set_rules('instagram',
 		'Instagram', 'trim|min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('whatsapp',
@@ -120,7 +120,7 @@ class homectl extends CI_Controller {
 		$this->form_validation->set_rules('link',
 		'Link', 'trim|min_length[2]|max_length[256]|xss_clean');
 		$this->form_validation->set_rules('des',
-		'Des', 'trim|min_length[2]|max_length[512]|xss_clean');
+		'Des', 'min_length[2]|max_length[512]|xss_clean');
 
 
 		$res = $this->form_validation->run();

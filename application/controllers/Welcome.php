@@ -51,8 +51,8 @@ class Welcome extends CI_Controller {
 	public function signUp(){
 		$this->load->helper(array('form', 'url'));
 
-		$this->load->view('common/header_back');
-		$this->load->view('signUp', array("error" => ""));
+		$this->load->view('common/header');
+		$this->load->view('common/signUp', array("error" => ""));
 		$this->load->view('common/footer');
 		return;
 	}
@@ -69,9 +69,9 @@ class Welcome extends CI_Controller {
 
 		//validasi terhadap isi field di form 'nama','alias', 'trim->memotong spasi|min 2 chara|max 128|pembersih`
 		$this->form_validation->set_rules('username',
-		'Username', 'trim|min_length[2]|max_length[128]|xss_clean');
+		'Username', 'min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('password',
-		'Password', 'trim|min_length[2]|max_length[128]|xss_clean');
+		'Password', 'min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules('email',
 		'Email', 'trim|min_length[2]|max_length[256]|xss_clean');
 
@@ -119,9 +119,9 @@ class Welcome extends CI_Controller {
 		$this->load->library(array('form_validation'));
 
 		$this->form_validation->set_rules
-		('username', 'Username', 'trim|min_length[2]|max_length[128]|xss_clean');
+		('username', 'Username', 'min_length[2]|max_length[128]|xss_clean');
 		$this->form_validation->set_rules
-		('password', 'Password', 'trim|min_length[2]|max_length[128]|xss_clean');
+		('password', 'Password', 'min_length[2]|max_length[128]|xss_clean');
 
 		$res = $this->form_validation->run();
 		if ($res == FALSE){
