@@ -18,7 +18,7 @@ Home
     }
 
     function getListUsers($id_user){
-    $query01 ="SELECT user_id, user_nama, user_pic, user_loc
+    $query01 ="SELECT *
             FROM users
             WHERE users.user_id <> " .$id_user;
     $res01 = $this->db->query($query01);
@@ -55,6 +55,77 @@ Home
         WHERE user_id = " .$id_user;
     $res05 = $this->db->query($query05);
     return $res05->result_array();    
+    }
+
+    function getEvent($id_event){
+        $query08 ="SELECT *
+            FROM events
+            WHERE event_id = " .$id_event;
+        $res08 = $this->db->query($query08);
+        return $res08->result_array();    
+        }
+
+    function getCat(){
+    $query06 ="SELECT *
+        FROM category";
+    $res06 = $this->db->query($query06);
+    return $res06->result_array();
+    }
+
+    function getType(){
+        $query07 ="SELECT *
+            FROM type";
+        $res07 = $this->db->query($query07);
+        return $res07->result_array();
+        }
+
+    function getTags($id_cat){
+        $this->db->select('cat_des');
+        $this->db->from('category');
+        $this->db->where('cat_id', $id_cat);
+    $res07 = $this->db->get()->result_array();
+
+    $desc = $res07[0]['cat_des'];
+    return $desc;
+    }
+
+    function getEvTy($id_ev){
+        $this->db->select('type_des');
+        $this->db->from('type');
+        $this->db->where('type_id', $id_ev);
+    $res09 = $this->db->get()->result_array();
+
+    $desc = $res09[0]['type_des'];
+    return $desc;
+    }
+
+    function getById($id_user){
+        $this->db->select('user_nama');
+        $this->db->from('users');
+        $this->db->where('user_id', $id_user);
+    $res10 = $this->db->get()->result_array();
+
+    $desc = $res10[0]['user_nama'];
+    return $desc;
+    }
+
+    function createNewEvent($newName, $userPass){
+        $thequery = "INSERT INTO events (event_name, event_date, event_type, event_loc, event_des, event_contact, event_pic, event_creator)
+                    VALUES ('"      . $this->input->post('nama') . "','"
+                                    . $this->input->post('tanggal') . "','"
+                                    . $this->input->post('type') . "','"
+                                    . $this->input->post('lokasi') . "','"
+                                    . $this->input->post('des') . "','"
+                                    . $this->input->post('nomor') . "','"
+                                    . $newName ."','"
+                                    . $userPass ."')";
+        $this->db->query($thequery);
+        $id_event = $this->db->insert_id();
+
+        $thequery2 = "INSERT INTO assign (assign_user, assign_event)
+                    VALUES ('"      . $userPass . "','"
+                                    . $id_event ."')";
+        $this->db->query($thequery2);
     }
 
 

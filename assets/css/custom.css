@@ -150,6 +150,12 @@ html{
   color: #383E56;
   }
 
+.cust-button8{
+  border-radius: 10px;
+  background: #F69E7B;
+  color: #383E56;
+}
+
 .center_div{
   margin: 0 auto;
   width:60% /* value of your choice which suits your alignment */

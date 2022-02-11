@@ -51,6 +51,7 @@ Class account extends CI_Model
         $newTelegram = $this->input->post('telegram');
         $newLink = $this->input->post('link');
         $newDes = $this->input->post('des');
+        $newCat1 = $this->input->post('cat1');
         
         $this->db->set("user_nama", $newName);
         $this->db->where('user_id', $id_user);
@@ -89,6 +90,10 @@ Class account extends CI_Model
         $this->db->update('users');
 
         $this->db->set("user_pic", $newProf);
+        $this->db->where('user_id', $id_user);
+        $this->db->update('users');
+
+        $this->db->set("user_cat1", $newCat1);
         $this->db->where('user_id', $id_user);
         $this->db->update('users');
     }

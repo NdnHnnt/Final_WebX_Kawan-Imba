@@ -7,7 +7,7 @@
     if (sizeof($other_user)>0){
       foreach ($other_user as $item) {
         $i++; 
-        if ($i < 4){?>
+    ?>
     <div class="card cust-ran2" style="width: 18rem; padding: 2%; margin: 0.5%">
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Users/<?php echo $item['user_pic']; ?>" alt="">
       <div class="card-body card-cust2 text-center">
@@ -26,23 +26,11 @@
         <a href="<?php echo base_url()?>index.php/homectl/viewUser/<?php echo $item['user_id']?>" class="btn cust-button4 font-weight-bold " style="color:#F69E7B">Lihat Bisnis</a>
       </div>
     </div>
-  <?php }
+  <?php
   } 
     }
   else {
   } ?>
-    <div class="card cust-ran2" style="width: 18rem; padding: 2%; margin: 0.5%">
-      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
-      <div class="card-body card-cust2 text-center">
-        <h5 class="card-title font-weight-bold">Cari Bisnis Lain</h5>
-        <a href="" class="btn font-weight-bold cust-button4" style="color:#F69E7B">Lihat Bisnis Lain</a>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class="row">
-    <br>
-  </div>
 
   
 
