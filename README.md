@@ -20,7 +20,7 @@
 ```http://localhost/swakarya/```<br>
 <br>
 *Please make sure to not make a change on this repository, or else the files won't load correctly.<br>
-<br>
+
 ## Technology Used
 Back-end: CodeIgniter3(Framework), phpMyAdmin(Database Management), PHP, SQL <br>
 Front-end: HTML, CSS<br>
