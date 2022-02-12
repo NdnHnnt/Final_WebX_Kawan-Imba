@@ -47,16 +47,16 @@
                   <a class="btn cust-button7 font-weight-bold col-sm-5">Edit Acara</a>
                 </div>';
         }
-      //Bingung
+//Halo Uli //
         if ($creator != $user){
           if ($this->CI->checkPart($user, $event) == FALSE) { ?>
             <div class="row">
-              <a href="<?php echo $this->CI->participate($event); ?>" onclick="" class="btn cust-button7 font-weight-bold col-sm-5" style="color: #383E56">Batalkan</a>
+              <a href="<?php echo $this->CI->participate($event); ?>" class="btn cust-button7 font-weight-bold col-sm-5" style="color: #383E56">Batalkan</a>
             </div>
           <?php } 
           else if ($this->CI->checkPart($user, $event) == TRUE){  ?>
             <div class="row">
-               <a href="<?php echo $this->CI->unparticipate($event); ?>" onclick="" class="btn cust-button4 font-weight-bold col-sm-5" style="color: #D4B5B0">Daftar</a>
+               <a href="<?php echo $this->CI->unparticipate($event); ?>" class="btn cust-button4 font-weight-bold col-sm-5" style="color: #D4B5B0" >Daftar</a>
             </div>
           <?php } 
         } ?>
