@@ -105,8 +105,8 @@ class homectl extends CI_Controller {
 		$config['upload_path'] 		=		'./img/Events/';
 		$config['allowed_types'] 	=		'gif|png|jpg';
 		$config['max_size'] 		=		100000;
-		$config['max_width']		=		1000;
-		$config['max_height']		= 		1000;
+		$config['max_width']		=		10000;
+		$config['max_height']		= 		10000;
 		$newName = time() . '_' . $_FILES["gambar"]['name'];
 		$config['file_name'] = $newName;
 		var_dump(isset($_FILES['gambar']));
@@ -271,6 +271,72 @@ class homectl extends CI_Controller {
 		}
 	}
 
+	public function editEvent($id_event){
+		$this->load->helper(array('form', 'url', 'security')) ;
+		$this->load->model('master');
+		$this->load->library(array('form_validation'));
+		$this->load->model('master');
+			$temp = $this->master->getCreator($id_event);
+			$session_data = $this->session->userdata('logged_in');
+        	$id_user = $session_data["user_id"];
+				if ($id_user != $temp){
+					redirect('homectl/viewTheEvents');
+				}
+				else {
+					$resultss = $this->master->getEvent2($id_event);
+					$datas['this_event'] = $resultss;
+			
+					//validasi terhadap isi field di form 'nama','alias', 'trim->memotong spasi|min 2 chara|max 128|pembersih`
+					$this->form_validation->set_rules('nama',
+					'Nama', 'min_length[2]|max_length[128]|xss_clean');
+					$this->form_validation->set_rules('tanggal',
+					'Tanggal', 'min_length[2]|max_length[128]|xss_clean');
+					$this->form_validation->set_rules('lokasi',
+					'Lokasi', 'trim|min_length[2]|max_length[128]|xss_clean');
+					$this->form_validation->set_rules('des',
+					'Des', 'min_length[2]|max_length[512]|xss_clean');
+					$this->form_validation->set_rules('nomor',
+					'Nomor', 'min_length[2]|max_length[512]|xss_clean');
+			
+					$res = $this->form_validation->run();
+					if ($res == FALSE){
+						$this->load->view('home/header');
+						$this->load->view('home/body11', $datas);
+						$this->load->view('home/footer');
+						return FALSE;
+					}
+					
+					if (empty($_POST['gambar'])){
+						$newName = $this->master->getEventImage($id_event);
+					}
+			
+					else {
+					$config['upload_path'] 		=		'./img/Events/';
+					$config['allowed_types'] 	=		'gif|png|jpg';
+					$config['max_size'] 		=		100000;
+					$config['max_width']		=		10000;
+					$config['max_height']		= 		10000;
+					$newName = time() . '_' . $_FILES["gambar"]['name'];
+					$config['file_name'] = $newName;
+					var_dump(isset($_FILES['gambar']));
+			
+					$this->load->library('upload', $config);
+					if ( ! $this->upload->do_upload('gambar')){
+						//Failed to upload
+						$error = array('error' => $this->upload->display_errors());
+						$this->load->view('home/header');
+						$this->load->view('home/body11', $datas);
+						$this->load->view('home/footer');
+						return;
+						}
+					}
+					//insert data akun ke database => query
+					$this->master->editTheEvent($newName, $id_event);
+					redirect('homectl/viewTheEvents');
+				}
+		
+	}
+
 	public function getCat($id_cat){
 		$this->load->model('master');
 		$results8 = $this->master->getTags($id_cat);
@@ -307,6 +373,7 @@ class homectl extends CI_Controller {
         $id_user = $session_data["user_id"];
 		$this->load->model('master');
 		$this->master->registerEvent($id_event, $id_user);
+		//redirect('homectl/specificEvent/'.$id_event);
 	}
 
 	public function unparticipate($id_event){
@@ -314,6 +381,20 @@ class homectl extends CI_Controller {
         $id_user = $session_data["user_id"];
 		$this->load->model('master');
 		$this->master->unregisterEvent($id_event, $id_user);
+		//redirect('homectl/specificEvent/'.$id_event);
 	}
 
+	public function deleteEvent($id_event){
+		$this->load->model('master');
+		$temp = $this->master->getCreator($id_event);
+		$session_data = $this->session->userdata('logged_in');
+        $id_user = $session_data["user_id"];
+		if ($id_user != $temp){
+			redirect('homectl/viewTheEvents');
+		}
+		else {
+			$this->master->deleteTheEvent($id_event);
+			redirect('homectl/viewTheEvents');
+		}
+	}
 }

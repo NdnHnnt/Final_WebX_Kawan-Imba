@@ -9,22 +9,22 @@
               <div class="col-lg-2 col-md-6 cust-footer">
                   <h5 class="text-white mb-3">Bisnis Anda</h5>
                   <ul class="list-unstyled text-muted small">
-                      <li><a class="cust-link" href="#">Profil Bisnis Anda</a></li>
-                      <li><a class="cust-link" href="#">Lihat Dashboard</a></li>
+                      <li><a class="cust-link" href="<?php echo base_url()?>index.php/welcome/login">Profil Bisnis Anda</a></li>
+                      <li><a class="cust-link" href="<?php echo base_url()?>index.php/welcome/login">Lihat Dashboard</a></li>
                   </ul>
               </div>
               <div class="col-lg-2 col-md-6 cust-footer">
                   <h5 class="text-white mb-3">Acara</h5>
                   <ul class="list-unstyled text-muted small">
-                      <li><a class="cust-link" href="#">Acara Anda</a></li>
-                      <li><a class="cust-link" href="#">Cari Acara</a></li>
+                      <li><a class="cust-link" href="<?php echo base_url()?>index.php/welcome/login">Acara Anda</a></li>
+                      <li><a class="cust-link" href="<?php echo base_url()?>index.php/welcome/login">Cari Acara</a></li>
                   </ul>
               </div>
               <div class="col-lg-2 col-md-6 cust-footer">
                 <h5 class="text-white mb-3">Ikuti Kami</h5>
                 <ul class="list-unstyled text-muted small">
-                    <li><a class="cust-link" href="#">Instagram</a></li>
-                    <li><a class="cust-link" href="#">Twitter</a></li>
+                    <li><a class="cust-link" href="">Instagram</a></li>
+                    <li><a class="cust-link" href="">Twitter</a></li>
                 </ul>
             </div>
           </div>

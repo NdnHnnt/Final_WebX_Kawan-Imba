@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 	public function login(){
 		$this->load->helper(array('form', 'url'));
 		if(!$this->session->userdata('logged_in')){
-			$this->load->view('common/header');
+			$this->load->view('common/header_log-sign');
 			$this->load->view('common/login');
 			$this->load->view('common/footer');
 		}
@@ -51,7 +51,7 @@ class Welcome extends CI_Controller {
 	public function signUp(){
 		$this->load->helper(array('form', 'url'));
 
-		$this->load->view('common/header');
+		$this->load->view('common/header_log-sign');
 		$this->load->view('common/signUp', array("error" => ""));
 		$this->load->view('common/footer');
 		return;
@@ -77,9 +77,9 @@ class Welcome extends CI_Controller {
 
 		$res = $this->form_validation->run();
 		if ($res == FALSE){
-			$error = array('error' => validation_errors());
-			$this->load->view('common/header');
-			$this->load->view('common/signup', $error);
+			$this->load->view('common/header_log-sign');
+			$this->load->view('common/signup');
+			$this->load->view('common/signUp_error');
 			$this->load->view('common/footer');
 			return FALSE;
 		}
@@ -87,18 +87,17 @@ class Welcome extends CI_Controller {
 		$config['upload_path'] 		=		'./img/Users/';
 		$config['allowed_types'] 	=		'gif|png|jpg';
 		$config['max_size'] 		=		100000;
-		$config['max_width']		=		1000;
-		$config['max_height']		= 		1000;
+		$config['max_width']		=		10000;
+		$config['max_height']		= 		10000;
 		$newName = time() . '_' . $_FILES["userfile"]['name'];
 		$config['file_name'] = $newName;
-		var_dump(isset($_FILES['userfile']));
 
 		$this->load->library('upload', $config);
 		if ( ! $this->upload->do_upload('userfile')){
 			//Failed to upload
-			$error = array('error' => $this->upload->display_errors());
-			$this->load->view('common/header');
-			$this->load->view('common/signUp', $error);
+			$this->load->view('common/header_log-sign');
+			$this->load->view('common/signUp');
+			$this->load->view('common/signUp_error');
 			$this->load->view('common/footer');
 			return;
 		}
@@ -106,7 +105,7 @@ class Welcome extends CI_Controller {
 		$data = array('upload_data' => $this->upload->data());
 		//Insert data akun ke dataBase
 		$id_user = $this->account->InsertNewUser($newName);
-		$this->load->view('common/header');
+		$this->load->view('common/header_log-sign');
 		$this->load->view('common/login');
 		$this->load->view('common/footer');
 		return;
@@ -126,8 +125,9 @@ class Welcome extends CI_Controller {
 		$res = $this->form_validation->run();
 		if ($res == FALSE){
 			$msg = validation_errors();
-			$this->load->view('common/header');
+			$this->load->view('common/header_log-sign');
 			$this->load->view('common/login');
+			$this->load->view('common/login_error');
 			$this->load->view('common/footer');
 			return FALSE;
 		}
@@ -136,8 +136,9 @@ class Welcome extends CI_Controller {
 
 		if (sizeof($user) <= 0){
 			//$msg = validation_errors();
-			$this->load->view('common/header');
+			$this->load->view('common/header_log-sign');
 			$this->load->view('common/login');
+			$this->load->view('common/login_error');
 			$this->load->view('common/footer');
 			return FALSE;
 		}

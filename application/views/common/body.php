@@ -297,7 +297,7 @@
         </div>
       </div>
      <div class="container-fluid center_div" align="center">
-      <input class="btn cust-button4" type="submit" value="Sign-Up"> <br>
+      <input class="btn cust-button4" type="submit" value="Daftarkan Bisnis Saya"> <br>
     </div>
   </form>
   </div>

@@ -12,7 +12,8 @@ Home
     function getListEvents($id_user){
     $query00 ="SELECT events.*
                 FROM events, assign
-                WHERE assign.assign_event=events.event_id AND assign.assign_user = " .$id_user;
+                WHERE assign.assign_event=events.event_id 
+                AND assign.assign_user = " .$id_user;
     $res00 = $this->db->query($query00);
     return $res00->result_array();
     }
@@ -27,10 +28,13 @@ Home
 
     function getListAllEvents($id_user){
     $query02 ="SELECT events.*
-            FROM events, assign
-            WHERE assign.assign_event=events.event_id AND assign.assign_user <> " .$id_user;
+            FROM events";
     $res02 = $this->db->query($query02);
     return $res02->result_array();    
+    }
+
+    function getListOtherEvents($id_user){
+
     }
 
     function viewSpecificEvent($id_event){
@@ -65,6 +69,14 @@ Home
         return $res08->result_array();    
         }
 
+    function getEvent2($id_event){
+        $query08 ="SELECT *
+                FROM events
+                WHERE event_id = " .$id_event;
+        $res08 = $this->db->query($query08);
+        return $res08->result_array();    
+    }
+
     function getCat(){
     $query06 ="SELECT *
         FROM category";
@@ -86,6 +98,16 @@ Home
     $res07 = $this->db->get()->result_array();
 
     $desc = $res07[0]['cat_des'];
+    return $desc;
+    }
+
+    function getEventImage($id_event){
+        $this->db->select('event_pic');
+        $this->db->from('events');
+        $this->db->where('event_id', $id_event);
+    $resss = $this->db->get()->result_array();
+
+    $desc = $resss[0]['event_pic'];
     return $desc;
     }
 
@@ -160,6 +182,65 @@ Home
                     WHERE assign_user = '" .$id_user . "'
                     AND assign_event = " .$id_event;
         $this->db->query($thequery);
+    }
+
+    function editTheEvent($newName, $id_event){
+        $newNama = $this->input->post('nama');
+        $newDate = $this->input->post('tanggal');
+        $newType = $this->input->post('type');
+        $newLoc = $this->input->post('lokasi');
+        $newDes = $this->input->post('des');
+        $newCont = $this->input->post('nomor');
+        
+        $this->db->set("event_name", $newNama);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+
+        $this->db->set("event_date", $newDate);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+        
+        $this->db->set("event_type", $newType);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+
+        $this->db->set("event_loc", $newLoc);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+
+        $this->db->set("event_des", $newDes);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+
+        $this->db->set("event_pic", $newName);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+
+        $this->db->set("event_contact", $newCont);
+        $this->db->where('event_id', $id_event);
+        $this->db->update('events');
+    }
+
+    function deleteTheEvent($id_event){
+        $thequery = "DELETE 
+                    FROM assign 
+                    WHERE assign_event = " .$id_event;
+        $this->db->query($thequery);
+
+        $thequery2 = "DELETE 
+                    FROM events
+                    WHERE event_id = " .$id_event;
+        $this->db->query($thequery2);
+    }
+
+    function getCreator($id_event){
+        $this->db->select('event_creator');
+        $this->db->from('events');
+        $this->db->where('event_id', $id_event);
+    $resCre = $this->db->get()->result_array();
+
+    $desc = $resCre[0]['event_creator'];
+    return $desc;  
     }
 }
 ?>

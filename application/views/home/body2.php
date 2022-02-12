@@ -32,7 +32,7 @@
   else {
   } ?>
     <div class="card cust-ran2" style="width: 18rem; padding: 2%; margin: 0.5%">
-      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
+      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/common.png">
       <div class="card-body card-cust2 text-center">
         <h5 class="card-title font-weight-bold">Cari Bisnis Lain</h5>
         <p class="card-text">Lihat bisnis lain yang tergabung dalam Swakarya</p>

@@ -17,7 +17,7 @@
         <h5 class="card-title font-weight-bold"><?php echo $item['event_name'] ?></h5>
         <p class="card-text"><?php echo $item['event_date'] ?> 
         <br>
-        <?php echo $item['event_type'] ?>
+        <?php echo $this->CI->getEvType($item['event_type']); ?>
         <br>
         <?php echo $item['event_loc'] ?></p>
         <a href="<?php echo base_url()?>index.php/homectl/specificEvent/<?php echo $item['event_id']?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>

@@ -26,7 +26,7 @@
       <div class="form-group row">
         <label for="password" class="col-sm-3 col-form-label col-form-label">Kata Sandi Baru</label>
         <div class="col-sm-8" style="align-items: flex-end;" >
-          <input type="password" class="form-control" id="password" name="password" value="<?php echo $this->session->userdata('logged_in')["user_nama"]; ?>" value="<?php echo $this->session->userdata('logged_in')["user_password"]; ?>" required>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Kata Sandi" required>
         </div>
       </div>
       <div class="form-group row">

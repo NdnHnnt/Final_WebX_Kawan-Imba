@@ -77,7 +77,7 @@
 
   }?>
     <div class="card cust-ran1" style="width: 18rem; padding: 2%; margin: 0.5%">
-      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/default.jpg">
+      <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/common.png">
       <div class="card-body card-cust1 text-center ">
         <h5 class="card-title font-weight-bold">Cari Acara Lain</h5>
         <p class="card-text">Lihat acara lain yang terdaftar dalam Swakarya</p>

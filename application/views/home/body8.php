@@ -55,7 +55,7 @@
       </div>
 
       <div class="form-group row">
-        <label for="Gambar" class="col-sm-3 col-form-label col-form-label">Foto Profil Bisnis</label>
+        <label for="Gambar" class="col-sm-3 col-form-label col-form-label">Foto Poster Acara</label>
         <div class="col-sm-8" style="align-items: flex-end;">
           <input type="file" id="gambar" name="gambar"/>
         </div>
