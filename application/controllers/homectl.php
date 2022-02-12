@@ -12,33 +12,7 @@ class homectl extends CI_Controller {
 		if(!$this->session->userdata('logged_in')){
 			redirect('welcome/login');
 		}
-		/*
-		$this->load->model('master');
-		$results1 = $this->master->getListReviewers();
-		$data1['reviewers'] = $results1;
-			$session_data = $this->session->userdata('logged_in');
-        	$id_user = $session_data["id_akun"];
-			$results2 = $this->master->getListAssigned($id_user);
-			$data2['task'] = $results2;
-		$results3 = $this->master->getReviewedPapers($id_user);
-		$data3['paper'] = $results3;
-		//view("editor/body", array('reviewers' => $results));
 
-        $this->load->view("editor/header");
-		$this->load->view("editor/body1",$data2);
-		$this->load->view("editor/body2",$data3);
-		$this->load->view("editor/body3");
-		$this->load->view("editor/body4",$data1);
-        $this->load->view("editor/footer");
-		
-
-		$session_data = $this->session->userdata('logged_in');
-        $id_user = $session_data["user_id"];
-		$results1 = $this->master->getListEvents($id_user);
-		$data1['my_events'] = $results1;
-			
-			
-*/		
 		$this->load->model('master');
 		$session_data = $this->session->userdata('logged_in');
 		$id_user = $session_data["user_id"];
@@ -100,7 +74,7 @@ class homectl extends CI_Controller {
 			$this->load->view("home/body7", $data2);
 	}
 
-//belum FRONTEND
+
 	public function createEvent(){
 		$this->load->helper(array('form', 'url', 'security')) ;
 		$this->load->model('master');
@@ -156,7 +130,7 @@ class homectl extends CI_Controller {
 		redirect('homectl/viewTheEvents');
 	}
 
-//FRONTEND BELUM
+
 	public function viewEvent($id_event){
 		$this->load->model('master');
 		$results5 = $this->master->viewSpecificEvent($id_event);
@@ -175,9 +149,9 @@ class homectl extends CI_Controller {
 		$data8['cat'] = $results8;
 
 		$this->load->helper(array('form', 'url'));
-		$this->load->view("home/header"); //header
-		$this->load->view("home/body5", $data8); //body $id_user
-		$this->load->view("home/footer"); //footer
+		$this->load->view("home/header"); 
+		$this->load->view("home/body5", $data8); 
+		$this->load->view("home/footer");
 		return;
 	}
 
@@ -316,6 +290,30 @@ class homectl extends CI_Controller {
 		$results9 = $this->master->getById($id_user);
 		
 		return $results9;
+	}
+
+	public function checkPart($id_user, $id_event){
+		$this->load->model('master');
+		$results11 = $this->master->getParty($id_user, $id_event);
+		if ($results11==0){
+			return FALSE;
+		}
+		else
+			return TRUE;
+	}
+
+	public function participate($id_event){
+		$session_data = $this->session->userdata('logged_in');
+        $id_user = $session_data["user_id"];
+		$this->load->model('master');
+		$this->master->registerEvent($id_event, $id_user);
+	}
+
+	public function unparticipate($id_event){
+		$session_data = $this->session->userdata('logged_in');
+        $id_user = $session_data["user_id"];
+		$this->load->model('master');
+		$this->master->unregisterEvent($id_event, $id_user);
 	}
 
 }

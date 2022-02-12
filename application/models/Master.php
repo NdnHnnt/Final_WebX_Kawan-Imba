@@ -137,5 +137,29 @@ Home
         $res = $this->db->query($query);
         return $res->result_array();   
     }
+
+    function getParty($id_user, $id_event){
+        $query ="SELECT *
+            FROM assign
+            WHERE assign.assign_user = '" .$id_user ."'
+            AND assign.assign_event = " . $id_event;
+        $res = $this->db->query($query);
+        return sizeof($res->result_array());   
+    }
+
+    function registerEvent($id_event, $id_user){
+        $thequery = "INSERT INTO assign (assign_user, assign_event)
+                    VALUES ('"      . $id_user . "','"
+                                    . $id_event ."')";
+        $this->db->query($thequery);
+    }
+
+    function unregisterEvent($id_event, $id_user){
+        $thequery = "DELETE 
+                    FROM assign 
+                    WHERE assign_user = '" .$id_user . "'
+                    AND assign_event = " .$id_event;
+        $this->db->query($thequery);
+    }
 }
 ?>

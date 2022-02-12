@@ -1,4 +1,5 @@
 <body>
+  
   <div class="row cust-text" style="padding: 2%;">
     <div class="col-sm">
         <img class="cust-img4" width="100%" style="margin-left: auto; margin-right: auto;" src="<?php echo base_url()?>img/Users/<?php echo $this->session->userdata('logged_in')["user_pic"];?>" >
@@ -66,7 +67,7 @@
         <p class="card-text"><?php echo $item['event_date'] ?><br>
         <?php echo $this->CI->getEvType($item['event_type']) ?> <br>
         <?php echo $item['event_loc'] ?></p>
-        <a href="homectl/specificEvent/<?php echo $item['event_id']?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>
+        <a href="<?php echo base_url();?>index.php/homectl/specificEvent/<?php echo $item['event_id'];?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>
       </div>
     </div>
     <?php }

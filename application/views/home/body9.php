@@ -23,7 +23,7 @@
       <div class="row">
         <br>
       </div>
-      <div class="row">
+      <div class="row font-weight-bold">
         <p>
         <?php echo $item['event_date']; ?> 
         <br>
@@ -38,17 +38,40 @@
         } ?>
     </div>
     <div class="col-sm-3 cust-text">
-      <div class="row">
-        <a class="btn cust-button7">Hapus Acara</a>
-      </div>
+      <?php 
+        $creator = $item['event_creator'];
+        $event = $item['event_id'];
+        $user = $this->session->userdata('logged_in')["user_id"];
+        if ($creator == $user){
+          echo '<div class="row">
+                  <a class="btn cust-button7 font-weight-bold col-sm-5">Edit Acara</a>
+                </div>';
+        }
+      //Bingung
+        if ($creator != $user){
+          if ($this->CI->checkPart($user, $event) == FALSE) { ?>
+            <div class="row">
+              <a href="<?php echo $this->CI->participate($event); ?>" onclick="" class="btn cust-button7 font-weight-bold col-sm-5" style="color: #383E56">Batalkan</a>
+            </div>
+          <?php } 
+          else if ($this->CI->checkPart($user, $event) == TRUE){  ?>
+            <div class="row">
+               <a href="<?php echo $this->CI->unparticipate($event); ?>" onclick="" class="btn cust-button4 font-weight-bold col-sm-5" style="color: #D4B5B0">Daftar</a>
+            </div>
+          <?php } 
+        } ?>
       <p class="half-line">&nbsp;</p>
       <div class="row">
-        <a class="btn cust-button9" >Info Kontak</a>
+        <a href="tel:<?php echo $item['event_contact']?>"class="btn cust-button8 font-weight-bold col-sm-5" >Info Kontak</a>
       </div>
       <p class="half-line">&nbsp;</p>
-      <div class="row">
-        <a class="btn cust-button7">Edit Acara</a>
-      </div>
+      <?php 
+        if ($item['event_creator'] == $this->session->userdata('logged_in')["user_id"]){
+          echo '<div class="row">
+                  <a href="" class="btn cust-button7 font-weight-bold col-sm-5">Hapus Acara</a>
+                </div>';
+        }
+      ?>
     </div>
   </div>
   <div class="row">
