@@ -19,7 +19,7 @@
 git clone https://github.com/NdnHnnt/swakarya.git
 ```
 3. Start localhost server access by local development tools.
-4. If the website local development tool is already installed and it can be accessed by following link <br>
+4. If the website local development tool is already installed, it can be accessed by the following link <br>
 ```
 http://localhost/swakarya/
 ```
