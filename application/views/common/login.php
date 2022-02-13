@@ -25,6 +25,11 @@
   </div>
   <p align="center">Belum punya akun bisnis? masuk di<a href="<?php echo base_url() . 'index.php/welcome/signUp'; ?>"/> sini </a></p>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </div>
 <!--
 <div>

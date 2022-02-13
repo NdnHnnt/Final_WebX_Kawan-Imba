@@ -37,7 +37,7 @@
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <a class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Hai <?php echo $this->session->userdata('logged_in')["user_nama"];?>! </a>
+        <a href="<?php echo base_url()?>index.php/homectl"class="btn my-2 my-sm-0 font-weight-bold cust-button1" href="#"> Hai <?php echo $this->session->userdata('logged_in')["user_nama"];?>! </a>
       </form>
     </div>
   </nav>

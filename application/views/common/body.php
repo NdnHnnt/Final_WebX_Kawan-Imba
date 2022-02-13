@@ -301,7 +301,7 @@
     </div>
   </form>
   </div>
-  <p align="center">Sudah punya akun bisnis? masuk di<a href="<?php echo base_url() . 'index.php/welcome/login'; ?>"/> sini </a></p>
+  <p align="center"><br> *Foto Profil Bisnis maksimal berukuran 1000x1000 dan nama file tidak menggunakan spasi.<br>Sudah punya akun bisnis? masuk di<a href="<?php echo base_url() . 'index.php/welcome/login'; ?>"/> sini </a></p>
   <br>
   </div>
 <!--
