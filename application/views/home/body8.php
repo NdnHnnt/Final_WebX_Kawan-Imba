@@ -62,8 +62,9 @@
       </div>
      <div class="container-fluid center_div" align="center">
       <input class="btn cust-button4" type="submit" value="Buat Acara"> <br>
-      </div>
+    </div>
   </form>
+  <p><br>*Foto Poster Acara maksimal berukuran 1000x1000 dan nama file tidak menggunakan spasi.</p>
   </div>
   </div>
   <div class="row">

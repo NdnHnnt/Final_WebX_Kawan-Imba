@@ -65,7 +65,8 @@
       </div>
   </form>
   <?php } ?>
-  </div>
+  <p><br>*Foto Poster Acara maksimal berukuran 1000x1000 dan nama file tidak menggunakan spasi.</p>
+</div>
   </div>
   <div class="row">
     <br>

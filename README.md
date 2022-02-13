@@ -30,13 +30,13 @@ http://localhost/phpmyadmin/
 ```
 2. If you haven't logged in yet, input your user data to log in or using `root` on username section (Login Form) and leave the password blank by default.
 3. Make a new database set named `swakarya`
-3. Import the SQL file to the database set, named `swakarya.sql` in this repository.
-5. The website is ready to use with its features such as adding user, adding event, editing event, and showing other users registered in this system.
-*Please make sure to not make a change on this repository, or else the files won't load correctly.
+4. Import the SQL file to the database set, named `swakarya.sql` in this repository.
+5. The website is ready to use with its features such as adding user, adding event, editing event, and showing other users registered in this system. <br>
+*Please make sure to not make a change on this repository, or else the files won't load correctly.<br>
 **If the phpMyAdmin login data is different by default, this change can be made on `database.php` file in folder `swakarya/application/config/database.php` within line 78-80 to synchronize current login data. 
 
 ## IV. Technology Used
-*Back-end*: CodeIgniter3(Framework), phpMyAdmin(Database Management), PHP, SQL <br>
-*Front-end*: HTML, CSS<br>
-*Local Development Tools*: Laragon(Nadine)/XAMPP(Awliya)
+**Back-end**: CodeIgniter3(Framework), phpMyAdmin(Database Management), PHP, SQL <br>
+**Front-end**: HTML, CSS<br>
+**Local Development Tools**: Laragon(Nadine)/XAMPP(Awliya)
  

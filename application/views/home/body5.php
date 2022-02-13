@@ -89,6 +89,7 @@
       <input class="btn cust-button4" type="submit" value="Update"> <br>
       </div>
   </form>
+  <p><br>*Foto Profil Bisnis maksimal berukuran 1000x1000 dan nama file tidak menggunakan spasi.</p>
   </div>
   </div>
   <div class="row">
