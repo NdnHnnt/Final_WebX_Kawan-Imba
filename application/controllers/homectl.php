@@ -72,6 +72,7 @@ class homectl extends CI_Controller {
 		$data2['other_user'] = $results2;
 			$this->load->view("home/header");
 			$this->load->view("home/body7", $data2);
+			$this->load->view("home/footer");
 	}
 
 
