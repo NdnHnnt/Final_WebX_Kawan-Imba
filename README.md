@@ -42,7 +42,7 @@ CREATE DATABASE `swakarya`
 
 ## IV. Teknologi yang Digunakan
 **Back-end**: CodeIgniter3(Framework), phpMyAdmin(Database Management), PHP, SQL <br>
-**Front-end**: HTML, CSS<br>
+**Front-end**: HTML, CSS, JavaScript<br>
 **Local Development Tools**: Laragon(used by Nadine)/XAMPP(used by Awliya)<br>
 **Other**: Git Bash, Github Desktop
 
@@ -88,7 +88,7 @@ http://localhost/phpmyadmin/
 
 ## IV. Technology Used
 **Back-end**: CodeIgniter3(Framework), phpMyAdmin(Database Management), PHP, SQL <br>
-**Front-end**: HTML, CSS<br>
+**Front-end**: HTML, CSS, JavaScript<br>
 **Local Development Tools**: Laragon(used by Nadine)/XAMPP(used by Awliya)<br>
 **Other**: Git Bash, Github Desktop
  
