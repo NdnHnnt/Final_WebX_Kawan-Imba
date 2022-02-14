@@ -14,7 +14,7 @@
     <title>Swakarya - Landing Page</title>
     <script src="https://kit.fontawesome.com/cd64ac8a0b.js" crossorigin="anonymous"></script>
   </head>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
       <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
     </a>
@@ -41,3 +41,7 @@
       </form>
     </div>
   </nav>
+	
+<body>
+
+<div class="content">

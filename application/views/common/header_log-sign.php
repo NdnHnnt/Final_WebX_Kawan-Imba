@@ -11,9 +11,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/css/custom.css">
     <link rel="icon" href="<?php echo base_url()?>assets/images/swakarya_logo.svg">
+    <script src="https://kit.fontawesome.com/cd64ac8a0b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <title>Swakarya - Landing Page</title>
   </head>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #EEDAD1;">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #EEDAD1;">
     <a class="navbar-brand" href="#">
       <img src="<?php echo base_url()?>assets/images/swakarya_logo.svg" width="200" class="d-inline-block align-top" alt="">
     </a>
