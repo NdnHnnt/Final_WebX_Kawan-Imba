@@ -34,7 +34,6 @@ class Welcome extends CI_Controller {
 		if(!$this->session->userdata('logged_in')){
 			$this->load->view('common/header_log-sign');
 			$this->load->view('common/login');
-			$this->load->view('common/footer');
 		}
 		else {
 			$session_data = $this->session->userdata('logged_in');
@@ -107,7 +106,6 @@ class Welcome extends CI_Controller {
 		$id_user = $this->account->InsertNewUser($newName);
 		$this->load->view('common/header_log-sign');
 		$this->load->view('common/login');
-		$this->load->view('common/footer');
 		return;
 
 	}
@@ -126,9 +124,8 @@ class Welcome extends CI_Controller {
 		if ($res == FALSE){
 			$msg = validation_errors();
 			$this->load->view('common/header_log-sign');
-			$this->load->view('common/login');
 			$this->load->view('common/login_error');
-			$this->load->view('common/footer');
+			$this->load->view('common/login');
 			return FALSE;
 		}
 		//periksa di database
@@ -137,9 +134,8 @@ class Welcome extends CI_Controller {
 		if (sizeof($user) <= 0){
 			//$msg = validation_errors();
 			$this->load->view('common/header_log-sign');
-			$this->load->view('common/login');
 			$this->load->view('common/login_error');
-			$this->load->view('common/footer');
+			$this->load->view('common/login');
 			return FALSE;
 		}
 		else {
