@@ -132,9 +132,10 @@ Home
     }
 
     function createNewEvent($newName, $userPass){
-        $thequery = "INSERT INTO events (event_name, event_date, event_type, event_loc, event_des, event_contact, event_pic, event_creator)
+        $thequery = "INSERT INTO events (event_name, event_date_start, event_date_end, event_type, event_loc, event_des, event_contact, event_pic, event_creator)
                     VALUES ('"      . $this->input->post('nama') . "','"
-                                    . $this->input->post('tanggal') . "','"
+                                    . $this->input->post('tanggal-mulai') . "','"
+                                    . $this->input->post('tanggal-akhir') . "','"
                                     . $this->input->post('type') . "','"
                                     . $this->input->post('lokasi') . "','"
                                     . $this->input->post('des') . "','"
@@ -243,4 +244,3 @@ Home
     return $desc;  
     }
 }
-?>

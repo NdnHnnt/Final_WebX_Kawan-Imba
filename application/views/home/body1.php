@@ -64,7 +64,18 @@
       <img class="card-img-top cust-img3" src="<?php echo base_url()?>/img/Events/<?php echo $item['event_pic'] ?>" alt="${item.title}">
       <div class="card-body card-cust1 text-center ">
         <h5 class="card-title font-weight-bold"><?php echo $item['event_name'] ?></h5>
-        <p class="card-text"><?php echo $item['event_date'] ?><br>
+        <p class="card-text">
+          <?php 
+							$originalDate = $item['event_date_start'];
+							$newDate = date('d M Y', strtotime($originalDate));
+							echo $newDate;
+						?> 
+						-
+						<?php 
+							$originalDate = $item['event_date_end'];
+							$newDate = date('d M Y', strtotime($originalDate));
+							echo $newDate;
+						?><br>
         <?php echo $this->CI->getEvType($item['event_type']) ?> <br>
         <?php echo $item['event_loc'] ?></p>
         <a href="<?php echo base_url();?>index.php/homectl/specificEvent/<?php echo $item['event_id'];?>" class="btn font-weight-bold cust-button7" style="color:#383E56">Lihat Detail</a>

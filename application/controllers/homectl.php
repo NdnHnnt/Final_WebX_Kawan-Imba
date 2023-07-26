@@ -35,11 +35,11 @@ class homectl extends CI_Controller {
 		$data3['my_events'] = $results3;
 			$results4 = $this->master->getListAllEvents($id_user);
 			$data4['other_events'] = $results4;
+			$data4['current_body'] = 'body4';
 		$this->load->view("home/header");
 		$this->load->view("home/body3", $data3);
 		$this->load->view("home/body4", $data4);
 		$this->load->view("home/footer");
-
 	}
 	public function viewUser($id_user){
 		$this->load->model('master');
@@ -290,8 +290,10 @@ class homectl extends CI_Controller {
 					//validasi terhadap isi field di form 'nama','alias', 'trim->memotong spasi|min 2 chara|max 128|pembersih`
 					$this->form_validation->set_rules('nama',
 					'Nama', 'min_length[2]|max_length[128]|xss_clean');
-					$this->form_validation->set_rules('tanggal',
-					'Tanggal', 'min_length[2]|max_length[128]|xss_clean');
+					$this->form_validation->set_rules('tanggal-mulai', 
+					'Tanggal-mulai', 'min_length[2]|max_length[128]|xss_clean|callback_validate_date_format');
+    				$this->form_validation->set_rules('tanggal-akhir', 
+					'Tanggal-akhir', 'min_length[2]|max_length[128]|xss_clean|callback_validate_date_format');
 					$this->form_validation->set_rules('lokasi',
 					'Lokasi', 'trim|min_length[2]|max_length[128]|xss_clean');
 					$this->form_validation->set_rules('des',

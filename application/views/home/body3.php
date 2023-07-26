@@ -13,7 +13,17 @@
 						<?php echo $item['event_name'] ?>
 					</h5>
 					<p class="card-text">
-						<?php echo $item['event_date'] ?>
+						<?php 
+							$originalDate = $item['event_date_start'];
+							$newDate = date('d M Y', strtotime($originalDate));
+							echo $newDate;
+						?> 
+						-
+						<?php 
+							$originalDate = $item['event_date_end'];
+							$newDate = date('d M Y', strtotime($originalDate));
+							echo $newDate;
+						?>
 						<br>
 						<?php echo $this->CI->getEvType($item['event_type']); ?>
 						<br>

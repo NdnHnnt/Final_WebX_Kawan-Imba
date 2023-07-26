@@ -17,12 +17,33 @@
           <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Acara" required>
         </div>
       </div>
+      
       <div class="form-group row">
+      <label for="email_bisnis" class="col-sm-3 col-form-label col-form-label">Tanggal Mulai</label>
+        <div class="input-group date col-sm-8" style="align-items: flex-end;">
+          <div class="input-group-addon">
+           <span class="glyphicon glyphicon-th"></span>
+          </div>
+        <input id ="tanggal-mulai" placeholder="Tanggal Acara Dimulai" type="date" class="form-control datepicker" name="tanggal-mulai" required>
+        </div>
+      </div>
+
+      <div class="form-group row">
+      <label for="email_bisnis" class="col-sm-3 col-form-label col-form-label">Tanggal Akhir</label>
+        <div class="input-group date col-sm-8" style="align-items: flex-end;">
+          <div class="input-group-addon">
+           <span class="glyphicon glyphicon-th"></span>
+          </div>
+        <input id ="tanggal-akhir" placeholder="Tanggal Acara Berakhir" type="date" class="form-control datepicker" name="tanggal-akhir" required>
+        </div>
+      </div>
+     
+      <!-- <div class="form-group row">
         <label for="email_bisnis" class="col-sm-3 col-form-label col-form-label">Tanggal Berlangsung</label>
         <div class="col-sm-8" style="align-items: flex-end;">
           <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal Acara" required>
         </div>
-      </div>
+      </div> -->
       <div class="form-group row">
         <label for="cat1" class="col-sm-3 col-form-label col-form-label">Tipe Acara</label>
         <div class="btn-group col-sm-8" style="text-align: flex-end;">
